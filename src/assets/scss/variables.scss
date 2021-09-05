@@ -1,18 +1,9 @@
-$headings-color: #1f3f5b;
-$footer-text-color: #c8c8cb;
-
-$footer-bg-color: #25252d;
-$body-bg-gradient: linear-gradient(to right, #2c2d3f, #3f4164);
-
-
-
-$main-bg-color: rgb(13, 24, 33);
-
-$main-container-width: 1400px;
-
-$primary-color: #0fe4d9;
-$secondary-color: #2485e6;
-
-$body-font-color: #e6e6e6;
-
-$main-font: 'Source Sans Pro', sans-serif;
+:root {
+    --primary-color: #0fe4d9;
+    --secondary-color: #2485e6;
+    --main-bg-color: rgb(13, 24, 33);
+    --body-font-color: #e6e6e6;
+    --body-bg-gradient: linear-gradient(to right, #2c2d3f, #3f4164);
+    --main-container-width: 1400px;
+    --main-font: "Source Sans Pro", sans-serif;
+}
