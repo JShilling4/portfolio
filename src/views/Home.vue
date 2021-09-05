@@ -10,10 +10,11 @@
 
         <section
             ref="aboutSection"
-            class="about"
+            class="about slanted"
         >
             <div class="container">
-                <h2 class="heading heading--light">
+                <h2 class="heading">
+                    About Me
                 </h2>
             </div>
         </section>
@@ -23,7 +24,7 @@
             class="recentWork"
         >
             <div class="container">
-                <h2 class="heading heading--dark heading--decorated">
+                <h2 class="heading">
                     Some Recent Work
                 </h2>
 
@@ -33,10 +34,11 @@
 
         <section
             ref="contactSection"
-            class="contact"
+            class="contact slanted"
         >
             <div class="container">
                 <h2 class="heading heading--light">
+                    Get In Touch
                 </h2>
             </div>
         </section>
@@ -64,7 +66,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 section {
     padding: 12rem 4rem;
     .heading:not(.hero) {
@@ -92,45 +93,66 @@ section.hero {
         color: $body-font-color;
         font-size: 4rem;
     }
-
-    .hidden-div {
-        width: 100%;
-        height: 110px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        // transform: translateX(-50%);
-    }
-    .triangle {
-        width: 0px;
-        height: 0px;
-        border-style: solid;
-        border-width: 0 1300px 0 1300px;
-        border-color: transparent transparent $secondary-color transparent;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: border-width 1s;
-        &.rise {
-            border-bottom-width: 300px;
-        }
-    }
 }
 
 section.about {
+    position: relative;
     margin-top: -2rem;
     background-color: $secondary-color;
+    .heading {
+        color: #fff;
+    }
 }
 
 section.recentWork {
+    text-align: center;
+    padding-top: 20rem;
     .heading {
         margin-bottom: 4rem;
+        color: #fff;
     }
 }
 
 section.contact {
     background-color: $secondary-color;
+    .heading {
+        color: #fff;
+    }
+}
+
+.slanted {
+    position: relative;
+    /* padding: 200px 0; */
+    background: #181818;
+    overflow: visible;
+    z-index: 1;
+}
+
+/* where the magic happens */
+.slanted:before,
+.slanted:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-2deg);
+}
+
+.slanted:after {
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(2deg);
+}
+
+/* displays the content inside, as these settings in the parent breaks the effect */
+.slanted div {
+    text-align: center;
+    line-height: 1.5;
 }
 </style>
 

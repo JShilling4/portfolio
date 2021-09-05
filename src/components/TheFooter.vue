@@ -1,6 +1,6 @@
 <template>
     <footer>
-        &copy;{{ new Date().getFullYear() }} Justin Shilling
+        <div>&copy;{{ new Date().getFullYear() }} Justin Shilling</div>
     </footer>
 </template>
 
@@ -16,9 +16,13 @@ footer {
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    background-color: $main-bg-color;
-    height: 10rem;
+    margin-top: 3.3rem;
+    height: 20rem;
     color: #fff;
     border-top: 4px solid $primary-color;
+    transform: skewY(2deg);
+    div {
+        transform: skewY(-2deg);
+    }
 }
 </style>
