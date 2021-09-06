@@ -66,6 +66,13 @@ export default {
     height: 300px;
     border-radius: 10px;
     margin-bottom: 2rem;
+    @include breakpoint(tablet-port) {
+        width: 350px;
+    }
+    @include breakpoint(mobile) {
+        width: 250px;
+        height: 200px;
+    }
     &:after {
         content: "";
         position: absolute;
@@ -101,10 +108,10 @@ export default {
         h3.title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: $main-bg-color;
+            color: var(--main-bg-color);
         }
         .technology-list {
-            color: $secondary-color;
+            color: var(--secondary-color);
             span {
                 font-size: 1.6rem;
                 font-weight: 600;

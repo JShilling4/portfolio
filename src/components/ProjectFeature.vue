@@ -68,7 +68,7 @@ export default {
     h3.title {
         font-size: 3.25rem;
         font-weight: 600;
-        color: $primary-color;
+        color: var(--primary-color);
         margin-bottom: 2rem;
     }
     .content {

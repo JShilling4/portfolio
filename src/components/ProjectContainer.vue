@@ -130,7 +130,6 @@ export default {
 .project-cards {
     display: flex;
     justify-content: space-around;
-    padding: 6rem 0;
     flex-wrap: wrap;
 }
 .fillerCard {

@@ -95,7 +95,10 @@
             </defs>
         </svg>
 
-        <nav v-if="showMobileMenu" class="nav">
+        <nav
+            v-if="showMobileMenu"
+            class="nav"
+        >
             <div class="nav-left">
                 <a
                     href="#"
@@ -169,7 +172,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .header {
     position: absolute;
     left: 0;
@@ -189,7 +191,7 @@ export default {
         height: 105px;
         background-color: #000;
         border-radius: 50%;
-        box-shadow: 1px 4px .7rem rgba(32, 99, 245, 1);
+        box-shadow: 1px 4px 0.7rem rgba(32, 99, 245, 1);
     }
 
     .nav {
@@ -202,7 +204,7 @@ export default {
             flex-direction: column;
             background-color: #fff;
             width: 85%;
-            top: 12rem;
+            top: 15rem;
             padding: 4rem 2rem;
             left: 50%;
             border-radius: 5px;
@@ -231,7 +233,7 @@ export default {
                 font-weight: 600;
                 font-size: 2.3rem;
                 display: block;
-                color: var(--body-font-color);
+                color: var(--secondary-color);
             }
             @include breakpoint(mobile) {
                 font-size: 1.8rem;
@@ -262,11 +264,17 @@ export default {
             font-size: 4rem;
             margin-left: 2rem;
             transition: color 0.3s;
+
             &:hover {
                 color: var(--primary-color);
             }
+
             &:not(:last-child) {
                 margin-left: 4rem;
+                @include breakpoint(tablet-land) {
+                    display: inline-block;
+                    margin: 4rem 4rem 0 0;
+                }
             }
         }
     }

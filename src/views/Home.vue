@@ -1,56 +1,102 @@
 <template>
     <div>
-        <section class="hero">
+        <PageSection class="heroSection">
             <div class="container">
-                <h1 class="heading heading--hero">
+                <h1 class="heading hero">
                     Hello, I'm Justin Shilling.
                 </h1>
+                <p class="heroCopy">
+                    Senior web developer specializing in UI/UX.
+                </p>
             </div>
-        </section>
+        </PageSection>
 
-        <section
+        <PageSection
             ref="aboutSection"
-            class="about slanted"
+            id="aboutSection"
+            class="aboutSection slanted"
         >
             <div class="container">
-                <h2 class="heading">
+                <PageSectionHeading>
                     About Me
-                </h2>
+                </PageSectionHeading>
+                <img
+                    src="@/assets/images/brain3_cropped.png"
+                    class="brainIllustration"
+                    alt="Right and left brain illustration"
+                >
             </div>
-        </section>
+        </PageSection>
 
-        <section
-            ref="workSection"
-            class="recentWork"
+        <PageSection
+            ref="recentWorkSection"
+            id="recentWorkSection"
+            class="recentWorkSection"
         >
             <div class="container">
-                <h2 class="heading">
+                <PageSectionHeading>
                     Some Recent Work
-                </h2>
+                </PageSectionHeading>
 
                 <ProjectContainer />
             </div>
-        </section>
+        </PageSection>
 
-        <section
+        <PageSection
             ref="contactSection"
-            class="contact slanted"
+            id="contactSection"
+            class="contactSection slanted"
         >
             <div class="container">
-                <h2 class="heading heading--light">
+                <PageSectionHeading>
                     Get In Touch
-                </h2>
+                </PageSectionHeading>
+
+                <div class="content">
+                    <form
+                        class="contactForm"
+                        data-netlify="true"
+                    >
+                        <InputGroup>
+                            <FormLabel id="name">Name/Company</FormLabel>
+                            <TextInput v-model="contactForm.name" />
+                        </InputGroup>
+                        <InputGroup>
+                            <FormLabel id="email">Email</FormLabel>
+                            <TextInput v-model="contactForm.email" />
+                        </InputGroup>
+                        <InputGroup>
+                            <FormLabel id="phone">Phone</FormLabel>
+                            <TextInput v-model="contactForm.phone" />
+                        </InputGroup>
+                        <InputGroup>
+                            <FormLabel id="phone">Message</FormLabel>
+                            <TextBox v-model="contactForm.message" />
+                        </InputGroup>
+
+                        <AppButton class="white">Send</AppButton>
+                    </form>
+
+                    <img
+                        src="@/assets/images/contact_vector.svg"
+                        alt=""
+                    />
+                </div>
             </div>
-        </section>
+        </PageSection>
     </div>
 </template>
 
 <script>
 import ProjectContainer from "@/components/ProjectContainer";
+import PageSection from "@/components/layout/section/PageSection";
+import PageSectionHeading from "@/components/layout/section/PageSectionHeading";
 
 export default {
     components: {
         ProjectContainer,
+        PageSection,
+        PageSectionHeading,
     },
     data() {
         return {
@@ -59,6 +105,12 @@ export default {
             observerOptions: {
                 threshold: 0,
             },
+            contactForm: {
+                name: null,
+                email: null,
+                phone: null,
+                message: null,
+            },
         };
     },
     mounted() {},
@@ -66,93 +118,91 @@ export default {
 </script>
 
 <style lang="scss">
-section {
-    padding: 12rem 4rem;
-    .heading:not(.hero) {
-        font-size: 3.6rem;
-        font-weight: 600;
-    }
-}
 .container {
-    max-width: $main-container-width;
+    max-width: var(--main-container-width);
     margin: 0 auto;
 }
 
-.heading {
-    display: inline-block;
-    position: relative;
-}
-
-section.hero {
+section.heroSection {
     display: flex;
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    @include breakpoint(mobile) {
+        min-height: 85vh;
+    }
 
     .heading {
-        color: $body-font-color;
+        margin-bottom: 1rem;
+        color: var(--body-font-color);
         font-size: 4rem;
+        @include breakpoint(mobile) {
+            font-size: 3rem;
+        }
+    }
+
+    .heroCopy {
+        color: rgba(255,255,255, .7);
+        font-weight: 200;
+        font-size: 2.5rem;
+        @include breakpoint(mobile) {
+            font-size: 2rem;
+        }
     }
 }
 
-section.about {
+section.aboutSection {
     position: relative;
     margin-top: -2rem;
-    background-color: $secondary-color;
-    .heading {
-        color: #fff;
+    background-color: var(--secondary-color);
+
+    .brainIllustration {
+        display: block;
+        height: 60rem;
+        @include breakpoint(tablet-land) {
+            height: auto;
+            width: 300px;
+            margin: 0 auto;
+        }
     }
 }
 
-section.recentWork {
-    text-align: center;
-    padding-top: 20rem;
-    .heading {
-        margin-bottom: 4rem;
-        color: #fff;
+section.recentWorkSection {
+
+}
+
+section.contactSection {
+    background-color: var(--secondary-color);
+
+    .content {
+        display: flex;
+        @include breakpoint(laptop) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .contactForm {
+            width: 50%;
+            padding: 2rem 8rem;
+            @include breakpoint(laptop) {
+                width: 70%;
+                order: 2;
+                padding: 0;
+            }
+            @include breakpoint(tablet-port) {
+                width: 100%;
+
+            }
+        }
+
+        img {
+            height: 400px;
+            @include breakpoint(laptop) {
+                height: auto;
+                width: 70%;
+                margin-bottom: 4rem;
+            }
+        }
     }
-}
-
-section.contact {
-    background-color: $secondary-color;
-    .heading {
-        color: #fff;
-    }
-}
-
-.slanted {
-    position: relative;
-    /* padding: 200px 0; */
-    background: #181818;
-    overflow: visible;
-    z-index: 1;
-}
-
-/* where the magic happens */
-.slanted:before,
-.slanted:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    transform-origin: left top;
-    transform: skewY(-2deg);
-}
-
-.slanted:after {
-    bottom: 0;
-    transform-origin: left bottom;
-    transform: skewY(2deg);
-}
-
-/* displays the content inside, as these settings in the parent breaks the effect */
-.slanted div {
-    text-align: center;
-    line-height: 1.5;
 }
 </style>
 
