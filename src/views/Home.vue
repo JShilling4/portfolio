@@ -134,6 +134,7 @@
                     <form
                         name="contact-form"
                         class="contactForm"
+                        method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                     >
