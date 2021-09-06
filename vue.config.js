@@ -8,11 +8,11 @@ module.exports = {
 				prependData: `
                     @import "@/assets/scss/variables.scss";
                     @import "@/assets/scss/mixins.scss";
-                 `,
-				sourceMap: true,
+                `,
+				sourceMap: false,
 			},
 		},
-		sourceMap: true,
+		sourceMap: false,
 	},
 
 	devServer: {

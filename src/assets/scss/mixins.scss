@@ -14,16 +14,12 @@
         @media (max-width: 1400px) {
             @content;
         }
-    } @else if $point == desktop {
-        @media (max-width: 1259px) {
+    } @else if $point == laptop {
+        @media (max-width: 1200px) {
             @content;
         }
     } @else if $point == ipadPro {
         @media (max-width: 1024px) {
-            @content;
-        }
-    } @else if $point == laptop {
-        @media (max-width: 999px) {
             @content;
         }
     } @else if $point == tablet-land {
