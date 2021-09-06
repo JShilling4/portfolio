@@ -1,16 +1,22 @@
 <template>
     <div>
+        <!-- Hero -->
         <PageSection class="heroSection">
             <div class="container">
                 <h1 class="heading hero">
                     Hello, I'm Justin Shilling.
                 </h1>
                 <p class="heroCopy">
-                    Senior web developer specializing in UI/UX.
+                    Creative web developer specializing in UI/UX.
                 </p>
+
+                <a href="#aboutSection">
+                    <AppButton class="secondary">See More</AppButton>
+                </a>
             </div>
         </PageSection>
 
+        <!-- About Me -->
         <PageSection
             ref="aboutSection"
             id="aboutSection"
@@ -20,14 +26,37 @@
                 <PageSectionHeading>
                     About Me
                 </PageSectionHeading>
-                <img
-                    src="@/assets/images/brain3_cropped.png"
-                    class="brainIllustration"
-                    alt="Right and left brain illustration"
-                >
+                <div class="content">
+                    <img
+                        src="@/assets/images/brain3_cropped.png"
+                        class="brainIllustration"
+                        alt="Right and left brain illustration"
+                    />
+                    <div>
+                        <p class="copy">
+                            Living my best life working in a profession where I can satisfy the tug of war between the left & right
+                            sides of my brain. There is nothing more fulfulling than being able to solve problems with code and create
+                            a work of art at the same time!
+                        </p>
+
+                        <p class="copy">
+                            Here are some of the technologies I am currently using to achieve this:
+                        </p>
+
+                        <div class="icon-container">
+                            <img src="@/assets/images/sass_icon.png" width="50" alt="Sass icon"/>
+                            <img src="@/assets/images/vue_icon.png" width="50" alt="Vue icon"/>
+                            <img src="@/assets/images/svelte_icon.png" width="50" alt="Svelte icon"/>
+                            <img src="@/assets/images/react_icon.png" width="50" alt="React icon"/>
+                            <img src="@/assets/images/node_icon.png" width="50" alt="Node icon"/>
+                            <img src="@/assets/images/graphql_icon.png" width="100" alt="GraphQL icon"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </PageSection>
 
+        <!-- Recent Work -->
         <PageSection
             ref="recentWorkSection"
             id="recentWorkSection"
@@ -42,6 +71,7 @@
             </div>
         </PageSection>
 
+        <!-- Contact -->
         <PageSection
             ref="contactSection"
             id="contactSection"
@@ -54,27 +84,49 @@
 
                 <div class="content">
                     <form
+                        name="contact-form"
                         class="contactForm"
                         data-netlify="true"
+                        data-netlify-honeypot="bot-field"
                     >
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value="contact-form"
+                        />
                         <InputGroup>
-                            <FormLabel id="name">Name/Company</FormLabel>
-                            <TextInput v-model="contactForm.name" />
+                            <FormLabel>Name/Company</FormLabel>
+                            <TextInput
+                                v-model="contactForm.name"
+                                name="name"
+                            />
                         </InputGroup>
                         <InputGroup>
-                            <FormLabel id="email">Email</FormLabel>
-                            <TextInput v-model="contactForm.email" />
+                            <FormLabel>Email</FormLabel>
+                            <TextInput
+                                v-model="contactForm.email"
+                                name="email"
+                            />
                         </InputGroup>
                         <InputGroup>
-                            <FormLabel id="phone">Phone</FormLabel>
-                            <TextInput v-model="contactForm.phone" />
+                            <FormLabel>Phone</FormLabel>
+                            <TextInput
+                                v-model="contactForm.phone"
+                                name="phone"
+                            />
                         </InputGroup>
                         <InputGroup>
-                            <FormLabel id="phone">Message</FormLabel>
-                            <TextBox v-model="contactForm.message" />
+                            <FormLabel>Message</FormLabel>
+                            <TextBox
+                                v-model="contactForm.message"
+                                name="message"
+                            />
                         </InputGroup>
 
-                        <AppButton class="white">Send</AppButton>
+                        <AppButton
+                            type="submit"
+                            class="white"
+                        >Send</AppButton>
                     </form>
 
                     <img
@@ -142,7 +194,8 @@ section.heroSection {
     }
 
     .heroCopy {
-        color: rgba(255,255,255, .7);
+        margin-bottom: 3rem;
+        color: rgba(255, 255, 255, 0.7);
         font-weight: 200;
         font-size: 2.5rem;
         @include breakpoint(mobile) {
@@ -156,20 +209,62 @@ section.aboutSection {
     margin-top: -2rem;
     background-color: var(--secondary-color);
 
+    .content {
+        display: flex;
+        align-items: center;
+        margin-top: 5rem;
+        @include breakpoint(ipadPro) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
     .brainIllustration {
         display: block;
-        height: 60rem;
+        margin-right: 4rem;
+        width: 40%;
+        @include breakpoint(laptop) {
+            width: 40%;
+            min-width: 375px;
+        }
+        @include breakpoint(ipadPro) {
+            margin-bottom: 2rem;
+        }
         @include breakpoint(tablet-land) {
             height: auto;
             width: 300px;
             margin: 0 auto;
         }
     }
+
+    .copy {
+        margin-bottom: 3rem;
+        color: #fff;
+        font-weight: 200;
+        font-size: 2.4rem;
+        line-height: 1.5;
+        @include breakpoint(ipadPro) {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    .icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include breakpoint(ipadPro) {
+            justify-content: center;
+        }
+        img {
+            margin: 2rem 2rem 1rem 0;
+        }
+    }
 }
 
-section.recentWorkSection {
+/* section.recentWorkSection {
 
-}
+} */
 
 section.contactSection {
     background-color: var(--secondary-color);
@@ -190,7 +285,6 @@ section.contactSection {
             }
             @include breakpoint(tablet-port) {
                 width: 100%;
-
             }
         }
 
@@ -200,6 +294,10 @@ section.contactSection {
                 height: auto;
                 width: 70%;
                 margin-bottom: 4rem;
+                border-radius: 10px;
+            }
+            @include breakpoint(mobile) {
+                width: 100%;
             }
         }
     }
