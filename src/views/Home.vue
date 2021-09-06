@@ -136,7 +136,6 @@
                         class="contactForm"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
-                        @submit.prevent="onFormSubmit"
                     >
                         <input
                             type="hidden"
@@ -148,6 +147,7 @@
                             <TextInput
                                 v-model="contactForm.name"
                                 name="name"
+                                required
                             />
                         </InputGroup>
                         <InputGroup>
@@ -155,6 +155,7 @@
                             <TextInput
                                 v-model="contactForm.email"
                                 name="email"
+                                required
                             />
                         </InputGroup>
                         <InputGroup>
@@ -162,8 +163,11 @@
                             <TextBox
                                 v-model="contactForm.message"
                                 name="message"
+                                required
                             />
                         </InputGroup>
+
+
 
                         <AppButton
                             type="submit"
