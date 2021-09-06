@@ -66,7 +66,7 @@ export default {
                     sourceCodeUrl: 'https://github.com/JShilling4/blogr-landing-page',
                     demoUrl: 'https://blogr-landing-page-js.netlify.app/',
                     technology: [
-                        'Vue 2',
+                        'Vue',
                         'Sass'
                     ]
                 },
@@ -85,7 +85,7 @@ export default {
                     sourceCodeUrl: 'https://github.com/JShilling4/easybank-landing-page',
                     demoUrl: 'https://easybank-landing-page-js.netlify.app/',
                     technology: [
-                        'Vue 2',
+                        'Vue',
                         'Sass'
                     ]
                 },
@@ -104,7 +104,7 @@ export default {
                     sourceCodeUrl: 'https://github.com/JShilling4/manage-landing-page',
                     demoUrl: 'https://manage-landing-page-js.netlify.app/',
                     technology: [
-                        'Vue 2',
+                        'Vue',
                         'Sass'
                     ]
                 }

@@ -17,5 +17,8 @@ export default {
     font-weight: 600;
     color: #fff;
     text-align: center;
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+    }
 }
 </style>

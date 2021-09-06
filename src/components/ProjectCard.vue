@@ -14,7 +14,7 @@
                         v-for="(tech, index) in data.technology"
                         :key="tech"
                     >
-                        {{ tech }} <span v-if="index !== data.technology.length-1">/</span>
+                        {{ tech }} <span v-if="index !== data.technology.length-1">/ </span>
                     </span>
                 </div>
             </div>
@@ -39,22 +39,22 @@
 
 <script>
 export default {
-    name: 'ProjectCard',
+    name: "ProjectCard",
     props: {
         data: {
             type: Object,
             required: true,
-            default () {
-                return {}
-            }
-        }
+            default() {
+                return {};
+            },
+        },
     },
     computed: {
-        projectImage () {
-            return require(`@/assets/images/${this.data.desktopImage.filename}`)
-        }
-    }
-}
+        projectImage() {
+            return require(`@/assets/images/${this.data.desktopImage.filename}`);
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -70,7 +70,7 @@ export default {
         width: 350px;
     }
     @include breakpoint(mobile) {
-        width: 250px;
+        width: 310px;
         height: 200px;
     }
     &:after {
@@ -128,8 +128,11 @@ export default {
         justify-content: center;
         transition: transform 0.5s, opacity 0.5s;
         z-index: 10;
-        button {
+        ::v-deep button {
             margin: 0 1rem;
+            @include breakpoint(mobile) {
+                min-width: 12rem;
+            }
         }
     }
 }

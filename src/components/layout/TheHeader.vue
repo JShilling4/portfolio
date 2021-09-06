@@ -101,21 +101,21 @@
         >
             <div class="nav-left">
                 <a
-                    href="#"
+                    href="#aboutSection"
                     class="nav-item"
                 >
                     About
                 </a>
 
                 <a
-                    href="#"
+                    href="#recentWorkSection"
                     class="nav-item"
                 >
                     Recent Work
                 </a>
 
                 <a
-                    href="#"
+                    href="#contactSection"
                     class="nav-item"
                 >
                     Contact
@@ -185,6 +185,9 @@ export default {
     @include breakpoint(tablet-land) {
         min-height: 10rem;
     }
+    @include breakpoint(mobile) {
+        padding: 2rem 2rem;
+    }
 
     .logo {
         width: 105px;
@@ -192,6 +195,15 @@ export default {
         background-color: #000;
         border-radius: 50%;
         box-shadow: 1px 4px 0.7rem rgba(32, 99, 245, 1);
+        @include breakpoint(mobile) {
+            width: 80px;
+            height: 80px;
+        }
+        text {
+            @include breakpoint(mobile) {
+                font-size: 4.4rem;
+            }
+        }
     }
 
     .nav {
