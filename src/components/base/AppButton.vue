@@ -49,11 +49,12 @@ button {
         letter-spacing: 1.4px;
         background-color: var(--primary-color);
         color: #fff;
+        box-shadow: var(--input-focus-shadow);
     }
 
     &.secondary {
         border: 2px solid var(--secondary-color);
-        color: var(--secondary-color);
+        color: var(--tertiary-color);
         &:hover {
             background-color: var(--secondary-color);
             color: #fff;
@@ -65,7 +66,7 @@ button {
         color: var(--secondary-color);
         border: 2px solid var(--secondary-color);
         &:hover {
-            background-color: var(--primary-color);
+            background-color: var(--tertiary-color);
             color: #fff;
         }
     }

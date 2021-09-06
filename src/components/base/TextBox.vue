@@ -20,16 +20,17 @@ export default {
 
 <style lang="scss" scoped>
 textarea {
+    font-family: "Nunito Sans", sans-serif;
     background-color: var(--input-bg-color);
     border: none;
     border-radius: var(--input-border-radius);
     height: 8rem;
     padding: 1rem;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--input-font-color);
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--input-border-color);
     outline: none;
-
+    font-size: 1.6rem;
     &:focus {
         box-shadow: var(--input-focus-shadow);
     }
