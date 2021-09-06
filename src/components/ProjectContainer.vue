@@ -71,6 +71,26 @@ export default {
                     ]
                 },
                 {
+                    id: 6,
+                    isFeatured: false,
+                    title: 'Country Look-up',
+                    desktopImage: {
+                        filename: 'country-lookup-desktop.png',
+                        altText: 'Desktop Screenshot of Country Lookup App'
+                    },
+                    mobileImage: {
+                        filename: '',
+                        altText: 'Mobile Screenshot of Country Lookup App'
+                    },
+                    sourceCodeUrl: 'https://github.com/JShilling4/country-lookup',
+                    demoUrl: 'https://country-lookup-info.netlify.app/',
+                    technology: [
+                        'React',
+                        'Styled Components',
+                        'Axios'
+                    ]
+                },
+                {
                     id: 3,
                     isFeatured: false,
                     title: 'Easybank Landing Page',
@@ -126,7 +146,8 @@ export default {
                         'Vue',
                         'Sass'
                     ]
-                }
+                },
+
             ]
         }
     },
