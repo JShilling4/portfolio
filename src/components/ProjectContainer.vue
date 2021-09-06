@@ -33,7 +33,7 @@ export default {
             projects: [
                 {
                     id: 1,
-                    isFeatured: true,
+                    isFeatured: false,
                     title: 'IP Geolocator',
                     desktopImage: {
                         filename: 'ip-geolocator-desktop.png',
@@ -72,7 +72,7 @@ export default {
                 },
                 {
                     id: 3,
-                    isFeatured: true,
+                    isFeatured: false,
                     title: 'Easybank Landing Page',
                     desktopImage: {
                         filename: 'easybank-desktop.png',
@@ -91,7 +91,7 @@ export default {
                 },
                 {
                     id: 4,
-                    isFeatured: true,
+                    isFeatured: false,
                     title: 'Manage Landing Page',
                     desktopImage: {
                         filename: 'manage-desktop.png',
@@ -103,6 +103,25 @@ export default {
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/manage-landing-page',
                     demoUrl: 'https://manage-landing-page-js.netlify.app/',
+                    technology: [
+                        'Vue',
+                        'Sass'
+                    ]
+                },
+                {
+                    id: 5,
+                    isFeatured: false,
+                    title: 'Mortgage Calculator',
+                    desktopImage: {
+                        filename: 'mortgage-calculator-desktop.png',
+                        altText: 'Desktop Screenshot of Mortgage Calculator'
+                    },
+                    mobileImage: {
+                        filename: '',
+                        altText: 'Mobile Screenshot of Mortgage Calculator'
+                    },
+                    sourceCodeUrl: 'https://github.com/JShilling4/mortgage-calculator',
+                    demoUrl: 'https://reactive-mortgage-calculator.netlify.app/',
                     technology: [
                         'Vue',
                         'Sass'

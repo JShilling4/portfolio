@@ -96,7 +96,7 @@
                         </div>
 
                         <a href="#recentWorkSection">
-                            <AppButton class="secondary">Show Me Some Code</AppButton>
+                            <AppButton class="secondary">See Projects</AppButton>
                         </a>
                         <!-- <p class="copy">Here are some of the supporting libraries & tools I am using to glue it all together:</p> -->
                     </div>
@@ -332,7 +332,7 @@ section.aboutSection {
     button {
         display: block;
         margin: 0 auto;
-        width: 25rem;
+        width: 20rem;
         @include breakpoint(mobile) {
             display: none;
         }
