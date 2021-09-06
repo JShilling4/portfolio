@@ -124,6 +124,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.project-container {
+    padding: 0 7rem;
+}
+
 .featured-projects {
     padding: 12rem 0 12rem;
 }
@@ -134,6 +138,6 @@ export default {
 }
 .fillerCard {
     height: 0;
-    width: 450px;
+    width: 375px;
 }
 </style>

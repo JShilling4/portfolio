@@ -4,14 +4,20 @@
         <PageSection class="heroSection">
             <div class="container">
                 <h1 class="heading hero">
-                    Hello, I'm Justin Shilling.
+                    Hello, I'm <span class="accent">Justin Shilling</span>.
                 </h1>
                 <p class="heroCopy">
-                    Creative web developer specializing in UI/UX.
+                    Creative web developer specializing in <span class="accent">UI/UX</span>.
                 </p>
 
+                <!-- <a
+                    href="./Justin_Shilling_Resume.pdf"
+                    target="_blank"
+                >
+                    <AppButton class="secondary">Resumé</AppButton>
+                </a> -->
                 <a href="#aboutSection">
-                    <AppButton class="secondary">See More</AppButton>
+                    <AppButton class="secondary">Tell Me More</AppButton>
                 </a>
             </div>
         </PageSection>
@@ -23,9 +29,7 @@
             class="aboutSection slanted"
         >
             <div class="container">
-                <PageSectionHeading>
-                    About Me
-                </PageSectionHeading>
+
                 <div class="content">
                     <img
                         src="@/assets/images/brain3_cropped.png"
@@ -33,24 +37,68 @@
                         alt="Right and left brain illustration"
                     />
                     <div>
-                        <p class="copy">
-                            Living my best life working in a profession where I can satisfy the tug of war between the left & right
-                            sides of my brain. There is nothing more fulfulling than being able to solve problems with code and create
-                            a work of art at the same time!
-                        </p>
+                        <PageSectionHeading
+                            align="left"
+                            b-margin="2rem"
+                        >
+                            About Me
+                        </PageSectionHeading>
 
                         <p class="copy">
-                            Here are some of the technologies I am currently using to achieve this:
+                            I <span class="accent">love</span> working in a profession where I can <span class="accent">satisfy</span> the tug of war between the left & right
+                            sides of my brain. There is nothing more <span class="accent">fulfulling</span> than being able to solve problems with <span class="accent">code</span> and create
+                            a work of <span class="accent">art</span> at the same time!
+                        </p>
+
+                        <PageSectionHeading
+                            align="left"
+                            b-margin="2rem"
+                        >
+                            Skills
+                        </PageSectionHeading>
+                        <p class="copy">
+                            Here are some of the <span class="accent">technologies</span> I am currently using as a Senior Front End Developer for
+                            <a
+                                href="https://www.ruoff.com"
+                                class="accent"
+                            >Ruoff Mortgage</a> and on side projects:
                         </p>
 
                         <div class="icon-container">
-                            <img src="@/assets/images/sass_icon.png" width="50" alt="Sass icon"/>
-                            <img src="@/assets/images/vue_icon.png" width="50" alt="Vue icon"/>
-                            <img src="@/assets/images/svelte_icon.png" width="50" alt="Svelte icon"/>
-                            <img src="@/assets/images/react_icon.png" width="50" alt="React icon"/>
-                            <img src="@/assets/images/node_icon.png" width="50" alt="Node icon"/>
-                            <img src="@/assets/images/graphql_icon.png" width="100" alt="GraphQL icon"/>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
+                                alt="Sass icon"
+                            />
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+                                alt="Vue icon"
+                            />
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
+                                alt="Svelte icon"
+                            />
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                                alt="React icon"
+                            />
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                                alt="Node icon"
+                            />
+                            <img
+                                src="@/assets/images/jest_icon.svg"
+                                alt="Jest icon"
+                            />
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg"
+                                alt="GraphQL icon"
+                            />
                         </div>
+
+                        <a href="#recentWorkSection">
+                            <AppButton class="secondary">Show Me Some Code</AppButton>
+                        </a>
+                        <!-- <p class="copy">Here are some of the supporting libraries & tools I am using to glue it all together:</p> -->
                     </div>
                 </div>
             </div>
@@ -88,6 +136,7 @@
                         class="contactForm"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
+                        @submit.prevent="onFormSubmit"
                     >
                         <input
                             type="hidden"
@@ -109,13 +158,6 @@
                             />
                         </InputGroup>
                         <InputGroup>
-                            <FormLabel>Phone</FormLabel>
-                            <TextInput
-                                v-model="contactForm.phone"
-                                name="phone"
-                            />
-                        </InputGroup>
-                        <InputGroup>
                             <FormLabel>Message</FormLabel>
                             <TextBox
                                 v-model="contactForm.message"
@@ -125,7 +167,7 @@
 
                         <AppButton
                             type="submit"
-                            class="white"
+                            class="secondary"
                         >Send</AppButton>
                     </form>
 
@@ -150,6 +192,7 @@ export default {
         PageSection,
         PageSectionHeading,
     },
+
     data() {
         return {
             activeSection: "",
@@ -160,11 +203,17 @@ export default {
             contactForm: {
                 name: null,
                 email: null,
-                phone: null,
                 message: null,
             },
         };
     },
+
+    methods: {
+        onFormSubmit() {
+            alert("submitted");
+        },
+    },
+
     mounted() {},
 };
 </script>
@@ -180,9 +229,6 @@ section.heroSection {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    @include breakpoint(mobile) {
-        min-height: 85vh;
-    }
 
     .heading {
         margin-bottom: 1rem;
@@ -202,13 +248,14 @@ section.heroSection {
             font-size: 2rem;
         }
     }
+    span.accent {
+        color: var(--tertiary-color);
+    }
 }
 
 section.aboutSection {
     position: relative;
-    margin-top: -2rem;
-    background-color: var(--secondary-color);
-
+    padding-bottom: 16rem;
     .content {
         display: flex;
         align-items: center;
@@ -221,7 +268,7 @@ section.aboutSection {
 
     .brainIllustration {
         display: block;
-        margin-right: 4rem;
+        margin-right: 10%;
         width: 40%;
         @include breakpoint(laptop) {
             width: 40%;
@@ -233,19 +280,33 @@ section.aboutSection {
         @include breakpoint(tablet-land) {
             height: auto;
             width: 300px;
-            margin: 0 auto;
+            margin: 0 auto 4rem;
         }
     }
 
     .copy {
         margin-bottom: 3rem;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.85);
         font-weight: 200;
-        font-size: 2.4rem;
-        line-height: 1.5;
+        font-size: 2.2rem;
+        line-height: 1.75;
+        max-width: 54rem;
         @include breakpoint(ipadPro) {
-            font-size: 2rem;
+            font-size: 2.2rem;
             text-align: center;
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+            text-align: left;
+        }
+
+        &:first-of-type {
+            margin-bottom: 5rem;
+        }
+
+        .accent {
+            color: var(--tertiary-color);
+            font-weight: 400;
         }
     }
 
@@ -253,22 +314,33 @@ section.aboutSection {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin-bottom: 2rem;
         @include breakpoint(ipadPro) {
             justify-content: center;
         }
         img {
-            margin: 2rem 2rem 1rem 0;
+            margin: 0 2rem 3rem 0;
+            width: 50px;
+        }
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        width: 25rem;
+        @include breakpoint(mobile) {
+            display: none;
         }
     }
 }
 
-/* section.recentWorkSection {
-
-} */
+section.recentWorkSection {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+}
 
 section.contactSection {
-    background-color: var(--secondary-color);
-
+    /* background-color: var(--secondary-color); */
     .content {
         display: flex;
         @include breakpoint(laptop) {
@@ -299,6 +371,11 @@ section.contactSection {
             @include breakpoint(mobile) {
                 width: 100%;
             }
+        }
+
+        button {
+            margin-top: 2rem;
+            width: 15rem;
         }
     }
 }

@@ -62,10 +62,10 @@ export default {
     position: relative;
     background-size: cover;
     background-position: center;
-    width: 450px;
-    height: 300px;
+    width: 375px;
+    height: 225px;
     border-radius: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     @include breakpoint(tablet-port) {
         width: 350px;
     }
@@ -82,11 +82,12 @@ export default {
         height: 100%;
         border-radius: 10px;
         opacity: 0;
-        background-color: #fff;
+        background-color: var(--main-bg-color);
         transition: opacity 0.5s;
     }
     &:hover:after {
         opacity: 0.95;
+        border: 1px solid var(--secondary-color);
     }
     &:hover .cardTop {
         transform: translateY(3rem);
@@ -95,6 +96,9 @@ export default {
     &:hover .controls {
         transform: translateY(-5rem);
         opacity: 1;
+                @include breakpoint(mobile) {
+                transform: translateY(-3rem);
+            }
     }
 
     .cardTop {
@@ -105,15 +109,19 @@ export default {
         text-align: center;
         transition: transform 0.5s, opacity 0.5s;
         z-index: 10;
+
         h3.title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--main-bg-color);
+            font-size: 2.7rem;
+            font-weight: 600;
+            color: var(--tertiary-color);
+            @include breakpoint(mobile) {
+                font-size: 2.4rem;
+            }
         }
         .technology-list {
             color: var(--secondary-color);
             span {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
                 font-weight: 600;
             }
         }
