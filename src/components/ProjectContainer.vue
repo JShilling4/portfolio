@@ -147,6 +147,27 @@ export default {
                         'Sass'
                     ]
                 },
+                {
+                    id: 7,
+                    isFeatured: false,
+                    title: 'Music Hub',
+                    desktopImage: {
+                        filename: 'music-hub-desktop.png',
+                        altText: 'Desktop Screenshot of Music Hub App'
+                    },
+                    mobileImage: {
+                        filename: '',
+                        altText: 'Mobile Screenshot of Music Hub App'
+                    },
+                    sourceCodeUrl: 'https://github.com/JShilling4/music-hub',
+                    demoUrl: 'https://music-hubb.netlify.app/',
+                    technology: [
+                        'Vue',
+                        'Vuex',
+                        'Tailwind',
+                        'Firebase'
+                    ]
+                },
 
             ]
         }
