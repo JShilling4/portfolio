@@ -39,8 +39,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-weight: 500;
-    margin-top: 3.3rem;
-    height: 20rem;
+    padding: 18rem 0 4rem;
     color: #fff;
 
     .text {
@@ -49,8 +48,8 @@ footer {
     }
 
     .social-link {
-        /* color: var(--secondary-color); */
-        color: rgba(255,255,255, .6);
+        color: var(--tertiary-color);
+        /* color: rgba(255,255,255, .6); */
         font-size: 3rem;
         margin: 0 2rem;
         transition: color .3s;

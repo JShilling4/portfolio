@@ -15,7 +15,7 @@ export default {
 section {
     padding: 12rem 4rem;
     @include breakpoint(tablet-port) {
-        padding: 12rem 3rem;
+        padding: 16rem 3rem;
     }
     @include breakpoint(mobile) {
         padding: 8rem 2rem;
@@ -31,6 +31,7 @@ section {
             width: 100%;
             height: 100%;
             position: absolute;
+            /* border-top: 36px solid var(--secondary-color); */
             left: 0;
             background: inherit;
             z-index: -1;

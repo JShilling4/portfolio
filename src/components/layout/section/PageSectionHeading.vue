@@ -1,5 +1,11 @@
 <template>
-    <h2 class="heading">
+    <h2
+        class="heading"
+        :style="{
+            textAlign: align,
+            marginBottom: bMargin
+        }"
+    >
         <slot></slot>
     </h2>
 </template>
@@ -7,14 +13,23 @@
 <script>
 export default {
     name: "PageSectionHeading",
+    props: {
+        align: {
+            type: String,
+            default: "center",
+        },
+        bMargin: {
+            type: String,
+            default: "6rem",
+        }
+    },
 };
 </script>
 
 <style lang="scss" scoped>
 .heading {
-    margin-bottom: 6rem;
     font-size: 3.6rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     text-align: center;
     @include breakpoint(mobile) {

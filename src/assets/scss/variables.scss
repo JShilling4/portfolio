@@ -1,13 +1,15 @@
 :root {
     --primary-color: rgb(15, 228, 217);
     --secondary-color: rgb(36, 133, 230);
+    --tertiary-color: rgb(128, 189, 250);
     --input-font-color: #fff;
     --input-bg-color: rgba(255, 255, 255, 0.315);
+    --input-border-color: var(--secondary-color);
     --main-bg-color: rgb(13, 24, 33);
     --body-font-color: rgb(230, 230, 230);
     --body-bg-gradient: linear-gradient(to right, #2c2d3f, #3f4164);
     --main-container-width: 1400px;
     --main-font: "Nunito Sans", sans-serif;
     --input-border-radius: 5px;
-    --input-focus-shadow: 0 4px 2rem rgba(15, 228, 217, .9);
+    --input-focus-shadow: 0 1px 1.2rem rgba(128, 189, 250, .6);
 }

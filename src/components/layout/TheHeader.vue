@@ -103,6 +103,7 @@
                 <a
                     href="#aboutSection"
                     class="nav-item"
+                    @click="closeMenu"
                 >
                     About
                 </a>
@@ -110,6 +111,7 @@
                 <a
                     href="#recentWorkSection"
                     class="nav-item"
+                    @click="closeMenu"
                 >
                     Recent Work
                 </a>
@@ -117,6 +119,7 @@
                 <a
                     href="#contactSection"
                     class="nav-item"
+                    @click="closeMenu"
                 >
                     Contact
                 </a>
@@ -124,6 +127,7 @@
                     href="https://github.com/JShilling4"
                     target="_blank"
                     class="social-link"
+                    @click="closeMenu"
                 >
                     <FontAwesomeIcon
                         :icon="['fab', 'github']"
@@ -134,6 +138,7 @@
                     href="https://www.linkedin.com/in/justin-shilling/"
                     class="social-link"
                     target="blank"
+                    @click="closeMenu"
                 >
                     <FontAwesomeIcon
                         :icon="['fab', 'linkedin']"
@@ -168,6 +173,11 @@ export default {
             type: Boolean,
         },
     },
+    methods: {
+        closeMenu() {
+            this.$emit("close");
+        }
+    }
 };
 </script>
 
@@ -194,7 +204,7 @@ export default {
         height: 105px;
         background-color: #000;
         border-radius: 50%;
-        box-shadow: 1px 4px 0.7rem rgba(32, 99, 245, 1);
+        box-shadow: 1px 1px 0.75rem var(--secondary-color);
         @include breakpoint(mobile) {
             width: 80px;
             height: 80px;
@@ -211,12 +221,15 @@ export default {
         justify-content: space-between;
         align-items: center;
         @include breakpoint(tablet-land) {
-            position: absolute;
+            position: fixed;
             display: flex;
             flex-direction: column;
-            background-color: #fff;
-            width: 85%;
-            top: 15rem;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            width: 100%;
+            min-height: 100vh;
+            top: 0;
+            z-index: 998;
             padding: 4rem 2rem;
             left: 50%;
             border-radius: 5px;
@@ -224,10 +237,6 @@ export default {
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-        @include breakpoint(mobile) {
-            top: 10rem;
-        }
-
         .nav-item {
             display: inline-block;
             position: relative;
@@ -241,20 +250,22 @@ export default {
             transition: color 0.3s;
             @include breakpoint(tablet-land) {
                 margin: 0;
-                padding: 1.5rem 0;
-                font-weight: 600;
-                font-size: 2.3rem;
+                padding: 4rem 0;
+                font-weight: 200;
+                color: #fff;
+                font-size: 4.5rem;
                 display: block;
-                color: var(--secondary-color);
+                /* color: var(--secondary-color); */
             }
             @include breakpoint(mobile) {
-                font-size: 1.8rem;
+                font-size: 2.5rem;
+                padding: 2rem 0;
             }
 
             &:hover {
                 &:after {
                     width: 100%;
-                    background-color: var(--secondary-color);
+                    background-color: var(--tertiary-color);
                 }
             }
 
@@ -276,9 +287,19 @@ export default {
             font-size: 4rem;
             margin-left: 2rem;
             transition: color 0.3s;
+            @include breakpoint(tablet-land) {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 6rem;
+            }
+            @include breakpoint(mobile) {
+                font-size: 4rem;
+            }
 
             &:hover {
-                color: var(--primary-color);
+                color: var(--tertiary-color);
+                @include breakpoint(tablet-land) {
+                    color: #fff;
+                }
             }
 
             &:not(:last-child) {
@@ -300,7 +321,9 @@ export default {
     }
 
     .mobileClose {
+        position: relative;
         margin-left: auto;
+        z-index: 999;
         @media screen and (min-width: 769px) {
             display: none;
         }
