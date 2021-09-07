@@ -95,58 +95,60 @@
             </defs>
         </svg>
 
-        <nav
-            v-if="showMobileMenu"
-            class="nav"
-        >
-            <div class="nav-left">
-                <a
-                    href="#aboutSection"
-                    class="nav-item"
-                    @click="closeMenu"
-                >
-                    About
-                </a>
+        <transition name="menu-grow">
+            <nav
+                v-if="showMobileMenu"
+                class="nav"
+            >
+                <div class="nav-left">
+                    <a
+                        href="#aboutSection"
+                        class="nav-item"
+                        @click="closeMenu"
+                    >
+                        About
+                    </a>
 
-                <a
-                    href="#recentWorkSection"
-                    class="nav-item"
-                    @click="closeMenu"
-                >
-                    Recent Work
-                </a>
+                    <a
+                        href="#recentWorkSection"
+                        class="nav-item"
+                        @click="closeMenu"
+                    >
+                        Recent Work
+                    </a>
 
-                <a
-                    href="#contactSection"
-                    class="nav-item"
-                    @click="closeMenu"
-                >
-                    Contact
-                </a>
-                <a
-                    href="https://github.com/JShilling4"
-                    target="_blank"
-                    class="social-link"
-                    @click="closeMenu"
-                >
-                    <FontAwesomeIcon
-                        :icon="['fab', 'github']"
-                        class="github"
-                    />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/justin-shilling/"
-                    class="social-link"
-                    target="blank"
-                    @click="closeMenu"
-                >
-                    <FontAwesomeIcon
-                        :icon="['fab', 'linkedin']"
-                        class="linkedIn"
-                    />
-                </a>
-            </div>
-        </nav>
+                    <a
+                        href="#contactSection"
+                        class="nav-item"
+                        @click="closeMenu"
+                    >
+                        Contact
+                    </a>
+                    <a
+                        href="https://github.com/JShilling4"
+                        target="_blank"
+                        class="social-link"
+                        @click="closeMenu"
+                    >
+                        <FontAwesomeIcon
+                            :icon="['fab', 'github']"
+                            class="github"
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/justin-shilling/"
+                        class="social-link"
+                        target="blank"
+                        @click="closeMenu"
+                    >
+                        <FontAwesomeIcon
+                            :icon="['fab', 'linkedin']"
+                            class="linkedIn"
+                        />
+                    </a>
+                </div>
+            </nav>
+        </transition>
 
         <img
             v-if="showMobileMenu"
@@ -176,8 +178,8 @@ export default {
     methods: {
         closeMenu() {
             this.$emit("close");
-        }
-    }
+        },
+    },
 };
 </script>
 
@@ -220,6 +222,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        /* transform: scale(1); */
         @include breakpoint(tablet-land) {
             position: fixed;
             display: flex;
@@ -229,11 +232,10 @@ export default {
             width: 100%;
             min-height: 100vh;
             top: 0;
+            left: 0;
             z-index: 998;
             padding: 4rem 2rem;
-            left: 50%;
             border-radius: 5px;
-            transform: translateX(-50%);
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
             text-align: center;
         }
@@ -328,5 +330,17 @@ export default {
             display: none;
         }
     }
+}
+
+.menu-grow-enter-active,
+.menu-grow-leave-active {
+    transition: opacity 0.3s ease, transform .5s ease;
+    transform-origin: top right;
+}
+
+.menu-grow-enter-from,
+.menu-grow-leave-to {
+    transform: scale(0);
+    opacity: 0;
 }
 </style>

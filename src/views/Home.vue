@@ -32,14 +32,14 @@
 
                 <div class="content">
                     <img
-                        src="@/assets/images/brain3_cropped.png"
+                        src="@/assets/images/brain3_cropped2.png"
                         class="brainIllustration"
                         alt="Right and left brain illustration"
                     />
                     <div>
                         <PageSectionHeading
                             align="left"
-                            b-margin="2rem"
+                            b-margin="1rem"
                         >
                             About Me
                         </PageSectionHeading>
@@ -52,7 +52,7 @@
 
                         <PageSectionHeading
                             align="left"
-                            b-margin="2rem"
+                            b-margin="1rem"
                         >
                             Skills
                         </PageSectionHeading>
@@ -80,14 +80,17 @@
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                                 alt="React icon"
+                                class="react"
                             />
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
                                 alt="Node icon"
+                                class="node"
                             />
                             <img
                                 src="@/assets/images/jest_icon.svg"
                                 alt="Jest icon"
+                                class="jest"
                             />
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg"
@@ -173,7 +176,7 @@
                         <AppButton
                             type="submit"
                             class="secondary"
-                        >Send</AppButton>
+                        >Submit</AppButton>
                     </form>
 
                     <img
@@ -261,6 +264,9 @@ section.heroSection {
 section.aboutSection {
     position: relative;
     padding-bottom: 16rem;
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
     .content {
         display: flex;
         align-items: center;
@@ -326,12 +332,21 @@ section.aboutSection {
         img {
             margin: 0 2rem 3rem 0;
             width: 50px;
+            &.jest {
+                width: 40px;
+            }
+            &.react {
+                width: 70px;
+                margin: 0 1rem 3rem -1rem;
+            }
+            &.node {
+                width: 70px;
+            }
         }
     }
 
     button {
         display: block;
-        margin: 0 auto;
         width: 20rem;
         @include breakpoint(mobile) {
             display: none;
@@ -342,10 +357,17 @@ section.aboutSection {
 section.recentWorkSection {
     padding-top: 16rem;
     padding-bottom: 16rem;
+    @include breakpoint(mobile) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
 }
 
 section.contactSection {
     /* background-color: var(--secondary-color); */
+    @include breakpoint(mobile) {
+        padding-bottom: 4rem;
+    }
     .content {
         display: flex;
         @include breakpoint(laptop) {
