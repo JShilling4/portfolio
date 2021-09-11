@@ -2,6 +2,7 @@
     <div class="projectBasic">
         <div
             class="card"
+            onclick=""
             :style="{ backgroundImage: `url(${projectImage})`}"
         >
             <div class="cardTop">
