@@ -44,7 +44,7 @@ export default {
                         altText: 'Mobile Screenshot of IP Geolocator Project'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/ip-tracker',
-                    demoUrl: 'https://ip-tracker-js.netlify.app/',
+                    demoUrl: 'https://justinshilling-ip-geolocator.netlify.app/',
                     technology: [
                         'Svelte',
                         'Axios',
@@ -64,7 +64,7 @@ export default {
                         altText: 'Mobile Screenshot of Blogr Landing Page'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/blogr-landing-page',
-                    demoUrl: 'https://blogr-landing-page-js.netlify.app/',
+                    demoUrl: 'https://justinshilling-blogr-landing-page.netlify.app/',
                     technology: [
                         'Vue',
                         'Sass'
@@ -83,7 +83,7 @@ export default {
                         altText: 'Mobile Screenshot of Country Lookup App'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/country-lookup',
-                    demoUrl: 'https://country-lookup-info.netlify.app/',
+                    demoUrl: 'https://justinshilling-country-lookup.netlify.app/',
                     technology: [
                         'React',
                         'Styled Components',
@@ -103,7 +103,7 @@ export default {
                         altText: 'Mobile Screenshot of Easybank Landing Page'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/easybank-landing-page',
-                    demoUrl: 'https://easybank-landing-page-js.netlify.app/',
+                    demoUrl: 'https://justinshilling-easybank-landing-page.netlify.app/',
                     technology: [
                         'Vue',
                         'Sass'
@@ -122,7 +122,7 @@ export default {
                         altText: 'Mobile Screenshot of Manage Landing Page'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/manage-landing-page',
-                    demoUrl: 'https://manage-landing-page-js.netlify.app/',
+                    demoUrl: 'https://justinshilling-manage-landing-page.netlify.app/',
                     technology: [
                         'Vue',
                         'Sass'
@@ -141,7 +141,7 @@ export default {
                         altText: 'Mobile Screenshot of Mortgage Calculator'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/mortgage-calculator',
-                    demoUrl: 'https://reactive-mortgage-calculator.netlify.app/',
+                    demoUrl: 'https://justinshilling-mortgage-calculator.netlify.app/',
                     technology: [
                         'Vue',
                         'Sass'
@@ -160,7 +160,7 @@ export default {
                         altText: 'Mobile Screenshot of Music Hub App'
                     },
                     sourceCodeUrl: 'https://github.com/JShilling4/music-hub',
-                    demoUrl: 'https://music-hubb.netlify.app/',
+                    demoUrl: 'https://justinshilling-music-hub.netlify.app/',
                     technology: [
                         'Vue',
                         'Vuex',
