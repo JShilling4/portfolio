@@ -137,7 +137,7 @@ export default {
         justify-content: center;
         transition: transform 0.5s, opacity 0.5s;
         z-index: 10;
-        ::v-deep button {
+        :deep(button) {
             margin: 0 1rem;
             @include breakpoint(mobile) {
                 min-width: 12rem;
