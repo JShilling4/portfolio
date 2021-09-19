@@ -1,6 +1,6 @@
 module.exports = {
-	configureWebpack: (config) => {
-		config.devtool = "source-map";
+	configureWebpack: {
+		devtool: "source-map",
 	},
 	css: {
 		loaderOptions: {
