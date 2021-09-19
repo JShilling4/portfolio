@@ -1,15 +1,34 @@
 <template>
     <div class="project-container">
-        <!-- <div class="featured-projects">
+        <!-- Web & Mobile Applications -->
+        <div class="projectInfo">
+            <SectionSubHeading>Web & Mobile Applications</SectionSubHeading>
+            <!-- <SectionCopy mb="4rem">
+                A handful of websites/landing pages I have completed for employers or as side projects to build
+                up my own design systems and component library.
+            </SectionCopy> -->
+        </div>
+        <div class="project-cards">
             <ProjectFeature
-                v-for="project in featuredProjects"
+                v-for="project in applications"
                 :key="project.id"
                 :data="project"
             />
-        </div> -->
+            <div class="fillerCard"></div>
+            <div class="fillerCard"></div>
+        </div>
+
+        <!-- Websites & Landing Pages -->
+        <div class="projectInfo">
+            <SectionSubHeading>Websites & Landing Pages</SectionSubHeading>
+            <SectionCopy mb="4rem">
+                A handful of websites/landing pages I have completed for employers or as side projects to build
+                up my own design systems and component library.
+            </SectionCopy>
+        </div>
         <div class="project-cards">
             <ProjectCard
-                v-for="project in projects"
+                v-for="project in websites"
                 :key="project.id"
                 :data="project"
             />
@@ -21,172 +40,54 @@
 
 <script>
 import ProjectCard from "@/components/ProjectCard";
+import ProjectFeature from "@/components/ProjectFeature";
+import SectionSubHeading from "@/components/layout/section/SectionSubHeading";
+import SectionCopy from "@/components/layout/section/SectionCopy";
 
 export default {
-    name: 'ProjectContainer',
+    name: "ProjectContainer",
     components: {
         ProjectCard,
+        ProjectFeature,
+        SectionSubHeading,
+        SectionCopy,
     },
 
-    data () {
-        return {
-            projects: [
-                {
-                    id: 1,
-                    isFeatured: false,
-                    title: 'IP Geolocator',
-                    desktopImage: {
-                        filename: 'ip-geolocator-desktop.png',
-                        altText: 'Desktop Screenshot of IP Geolocator Project'
-                    },
-                    mobileImage: {
-                        filename: 'ip-geolocator-mobile.png',
-                        altText: 'Mobile Screenshot of IP Geolocator Project'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/ip-tracker',
-                    demoUrl: 'https://justinshilling-ip-geolocator.netlify.app/',
-                    technology: [
-                        'Svelte',
-                        'Axios',
-                        'Sass'
-                    ]
-                },
-                {
-                    id: 2,
-                    isFeatured: false,
-                    title: 'Blogr Landing Page',
-                    desktopImage: {
-                        filename: 'blogr-desktop.png',
-                        altText: 'Desktop Screenshot of Blogr Landing Page'
-                    },
-                    mobileImage: {
-                        filename: 'blogr-mobile.png',
-                        altText: 'Mobile Screenshot of Blogr Landing Page'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/blogr-landing-page',
-                    demoUrl: 'https://justinshilling-blogr-landing-page.netlify.app/',
-                    technology: [
-                        'Vue',
-                        'Sass'
-                    ]
-                },
-                {
-                    id: 6,
-                    isFeatured: false,
-                    title: 'Country Look-up',
-                    desktopImage: {
-                        filename: 'country-lookup-desktop.png',
-                        altText: 'Desktop Screenshot of Country Lookup App'
-                    },
-                    mobileImage: {
-                        filename: '',
-                        altText: 'Mobile Screenshot of Country Lookup App'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/country-lookup',
-                    demoUrl: 'https://justinshilling-country-lookup.netlify.app/',
-                    technology: [
-                        'React',
-                        'Styled Components',
-                        'Axios'
-                    ]
-                },
-                {
-                    id: 3,
-                    isFeatured: false,
-                    title: 'Easybank Landing Page',
-                    desktopImage: {
-                        filename: 'easybank-desktop.png',
-                        altText: 'Desktop Screenshot of Easybank Landing Page'
-                    },
-                    mobileImage: {
-                        filename: 'easybank-mobile.png',
-                        altText: 'Mobile Screenshot of Easybank Landing Page'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/easybank-landing-page',
-                    demoUrl: 'https://justinshilling-easybank-landing-page.netlify.app/',
-                    technology: [
-                        'Vue',
-                        'Sass'
-                    ]
-                },
-                {
-                    id: 4,
-                    isFeatured: false,
-                    title: 'Manage Landing Page',
-                    desktopImage: {
-                        filename: 'manage-desktop.png',
-                        altText: 'Desktop Screenshot of Manage Landing Page'
-                    },
-                    mobileImage: {
-                        filename: 'manage-mobile.png',
-                        altText: 'Mobile Screenshot of Manage Landing Page'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/manage-landing-page',
-                    demoUrl: 'https://justinshilling-manage-landing-page.netlify.app/',
-                    technology: [
-                        'Vue',
-                        'Sass'
-                    ]
-                },
-                {
-                    id: 5,
-                    isFeatured: false,
-                    title: 'Mortgage Calculator',
-                    desktopImage: {
-                        filename: 'mortgage-calculator-desktop.png',
-                        altText: 'Desktop Screenshot of Mortgage Calculator'
-                    },
-                    mobileImage: {
-                        filename: '',
-                        altText: 'Mobile Screenshot of Mortgage Calculator'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/mortgage-calculator',
-                    demoUrl: 'https://justinshilling-mortgage-calculator.netlify.app/',
-                    technology: [
-                        'Vue',
-                        'Sass'
-                    ]
-                },
-                {
-                    id: 7,
-                    isFeatured: false,
-                    title: 'Music Hub',
-                    desktopImage: {
-                        filename: 'music-hub-desktop.png',
-                        altText: 'Desktop Screenshot of Music Hub App'
-                    },
-                    mobileImage: {
-                        filename: '',
-                        altText: 'Mobile Screenshot of Music Hub App'
-                    },
-                    sourceCodeUrl: 'https://github.com/JShilling4/music-hub',
-                    demoUrl: 'https://justinshilling-music-hub.netlify.app/',
-                    technology: [
-                        'Vue',
-                        'Vuex',
-                        'Tailwind',
-                        'Firebase'
-                    ]
-                },
-
-            ]
-        }
+    data() {
+        return {};
     },
     computed: {
-        featuredProjects () {
-            return this.projects.filter(project => project.isFeatured === true)
+        projects() {
+            return this.$store.state.projects;
         },
-        projectCards () {
-            return this.projects.filter(project => project.isFeatured === false)
-        }
-    }
-
-}
+        websites() {
+            return this.$store.state.projects.filter(
+                (p) => p.type === "website"
+            );
+        },
+        applications() {
+            return this.$store.state.projects.filter(
+                (p) => p.type === "webapp"
+            );
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 .project-container {
     padding: 0 7rem;
+
+    @include breakpoint(ipadPro) {
+        padding: 0;
+    }
+
+    .projectInfo {
+        margin-left: 2rem;
+        @include breakpoint(tablet-land) {
+            margin: 0;
+        }
+    }
 }
 
 .featured-projects {

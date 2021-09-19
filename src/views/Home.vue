@@ -37,25 +37,25 @@
                         alt="Right and left brain illustration"
                     />
                     <div>
-                        <PageSectionHeading
+                        <SectionHeading
                             align="left"
-                            b-margin="1rem"
+                            mb="2rem"
                         >
                             About Me
-                        </PageSectionHeading>
+                        </SectionHeading>
 
                         <p class="copy">
                             I <span class="accent">love</span> working in a profession where I can <span class="accent">satisfy</span> the tug of war between the left & right
-                            sides of my brain. There is nothing more <span class="accent">fulfulling</span> than being able to solve problems with <span class="accent">code</span> and create
+                            sides of my brain. There is nothing more <span class="accent">fulfulling</span> to me than being able to solve problems through <span class="accent">code</span> and create
                             a work of <span class="accent">art</span> at the same time!
                         </p>
 
-                        <PageSectionHeading
+                        <SectionHeading
                             align="left"
-                            b-margin="1rem"
+                            mb="2rem"
                         >
                             Skills
-                        </PageSectionHeading>
+                        </SectionHeading>
                         <p class="copy">
                             Here are some of the <span class="accent">technologies</span> I am currently using as a Senior Front End Developer for
                             <a
@@ -98,7 +98,7 @@
                             />
                         </div>
 
-                        <a href="#recentWorkSection">
+                        <a href="#recentWorkSection" class="projectsLink">
                             <AppButton class="secondary">See Projects</AppButton>
                         </a>
                         <!-- <p class="copy">Here are some of the supporting libraries & tools I am using to glue it all together:</p> -->
@@ -114,9 +114,9 @@
             class="recentWorkSection"
         >
             <div class="container">
-                <PageSectionHeading>
-                    Some Recent Work
-                </PageSectionHeading>
+                <div class="heading-container">
+                    <SectionHeading mb="8rem">Some Recent Work</SectionHeading>
+                </div>
 
                 <ProjectContainer />
             </div>
@@ -129,9 +129,9 @@
             class="contactSection slanted"
         >
             <div class="container">
-                <PageSectionHeading>
-                    Get In Touch
-                </PageSectionHeading>
+                <div class="heading-container">
+                    <SectionHeading>Get In Touch</SectionHeading>
+                </div>
 
                 <div class="content">
                     <form
@@ -171,8 +171,6 @@
                             />
                         </InputGroup>
 
-
-
                         <AppButton
                             type="submit"
                             class="secondary"
@@ -192,13 +190,13 @@
 <script>
 import ProjectContainer from "@/components/ProjectContainer";
 import PageSection from "@/components/layout/section/PageSection";
-import PageSectionHeading from "@/components/layout/section/PageSectionHeading";
+import SectionHeading from "@/components/layout/section/SectionHeading";
 
 export default {
     components: {
         ProjectContainer,
         PageSection,
-        PageSectionHeading,
+        SectionHeading,
     },
 
     data() {
@@ -230,6 +228,10 @@ export default {
 .container {
     max-width: var(--main-container-width);
     margin: 0 auto;
+}
+
+.heading-container {
+    text-align: center;
 }
 
 section.heroSection {
@@ -287,6 +289,7 @@ section.aboutSection {
         }
         @include breakpoint(ipadPro) {
             margin-bottom: 2rem;
+            margin-right: 0;
         }
         @include breakpoint(tablet-land) {
             height: auto;
@@ -299,12 +302,11 @@ section.aboutSection {
         margin-bottom: 3rem;
         color: rgba(255, 255, 255, 0.85);
         font-weight: 200;
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.75;
-        max-width: 54rem;
+        max-width: 57rem;
         @include breakpoint(ipadPro) {
-            font-size: 2.2rem;
-            text-align: center;
+            max-width: 70rem;
         }
         @include breakpoint(mobile) {
             font-size: 1.8rem;
@@ -316,7 +318,7 @@ section.aboutSection {
         }
 
         .accent {
-            color: var(--tertiary-color);
+            color: var(--primary-color);
             font-weight: 400;
         }
     }
@@ -348,7 +350,7 @@ section.aboutSection {
     button {
         display: block;
         width: 20rem;
-        @include breakpoint(mobile) {
+        @include breakpoint(tablet-land) {
             display: none;
         }
     }

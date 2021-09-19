@@ -95,11 +95,11 @@ export default {
         opacity: 1;
     }
     &:hover .controls {
-        transform: translateY(-5rem);
+        transform: translateY(-3rem);
         opacity: 1;
-                @include breakpoint(mobile) {
-                transform: translateY(-3rem);
-            }
+        /* @include breakpoint(mobile) {
+            transform: translateY(-3rem);
+        } */
     }
 
     .cardTop {
@@ -115,6 +115,7 @@ export default {
             font-size: 2.7rem;
             font-weight: 600;
             color: var(--tertiary-color);
+            margin-bottom: 0;
             @include breakpoint(mobile) {
                 font-size: 2.4rem;
             }
