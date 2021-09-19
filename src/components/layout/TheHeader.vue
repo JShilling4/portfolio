@@ -230,7 +230,7 @@ export default {
             justify-content: center;
             background-color: var(--secondary-color);
             width: 100%;
-            min-height: 100vh;
+            height: 100%;
             top: 0;
             left: 0;
             z-index: 998;
@@ -246,7 +246,7 @@ export default {
             padding-bottom: 1rem;
             text-align: center;
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 300;
             letter-spacing: 1px;
             color: var(--body-font-color);
             transition: color 0.3s;
@@ -255,7 +255,7 @@ export default {
                 padding: 4rem 0;
                 font-weight: 200;
                 color: #fff;
-                font-size: 4.5rem;
+                font-size: 3rem;
                 display: block;
                 /* color: var(--secondary-color); */
             }
@@ -291,7 +291,7 @@ export default {
             transition: color 0.3s;
             @include breakpoint(tablet-land) {
                 color: rgba(255, 255, 255, 0.7);
-                font-size: 6rem;
+                font-size: 3rem;
             }
             @include breakpoint(mobile) {
                 font-size: 4rem;
