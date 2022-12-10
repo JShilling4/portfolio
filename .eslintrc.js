@@ -1,25 +1,29 @@
 module.exports = {
-    root: true,
-    env: {
-        node: true,
-    },
-    extends: ["plugin:vue/vue3-essential", "eslint:recommended"],
-    parserOptions: {
-        parser: "babel-eslint",
-    },
-    rules: {
-        "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-        "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    },
-    overrides: [
-        {
-            files: [
-                "**/__tests__/*.{j,t}s?(x)",
-                "**/tests/unit/**/*.spec.{j,t}s?(x)",
-            ],
-            env: {
-                jest: true,
-            },
-        },
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+    parser: "@typescript-eslint/parser",
+  },
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:nuxt/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended",
+  ],
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "vue/script-setup-no-uses-vars": "off",
+    "vue/multi-word-component-names": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
     ],
+  },
 };
