@@ -30,67 +30,93 @@
           />
           <div>
             <SectionHeading align="left" mb="2rem"> About Me </SectionHeading>
-
             <p class="copy">
-              I <span class="accent">love</span> working in a profession where I
-              can satisfy the tug of war between the left & right sides of my
-              brain. There is nothing more
-              <span class="accent">fulfulling</span> to me than being able to
-              solve problems with <span class="accent">code</span> and create a
-              work of <span class="accent">art</span> at the same time!
+              In the first 5 years of my career as a
+              <span class="accent">Frontend Engineer</span>, I have had the
+              great pleasure of significantly contributing to the front-end of
+              over 15 B2C websites and several applications including marketing
+              & e-commerce platforms. <br />
+              <span class="accent">Frontend development</span> satisfies the tug
+              of war between the left & right sides of my brain. It has truly
+              become a <span class="accent">passion</span> of mine to solve
+              problems with <span class="accent">code</span> and create a work
+              of <span class="accent">art</span> at the same time!
             </p>
 
             <SectionHeading align="left" mb="2rem"> Skills </SectionHeading>
             <p class="copy">
-              Here are some of the <span class="accent">technologies</span> I am
-              currently using as a Front End Developer for
-              <a
-                href="https://www.linkedin.com/company/juniperbyimc/mycompany/"
-                class="accent"
-                >Juniper by IMC</a
-              >
-              and on side projects:
+              Here are some of the <span class="accent">technologies</span> I
+              have used working on projects for Ruoff Mortgage, Juniper by IMC
+              and freelance:
             </p>
 
             <div class="icon-container">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
-                alt="Sass icon"
-                title="Sass"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
-                alt="Vue icon"
-                title="Vue.js"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
-                alt="Typescript icon"
-                title="Typescript"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-                alt="React icon"
-                class="react"
-                title="React.js"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
-                alt="Node icon"
-                class="node"
-                title="Node.js"
-              />
-              <img
-                src="@/assets/images/jest_icon.svg"
-                alt="Jest icon"
-                class="jest"
-                title="Jest Testing Framework"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg"
-                alt="GraphQL icon"
-                title="GraphQL"
-              />
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
+                  alt="JavaScript"
+                  title="JavaScript"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"
+                  alt="Vue icon"
+                  title="Vue.js"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                  alt="React icon"
+                  class="react"
+                  title="React.js"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+                  alt="Typescript icon"
+                  title="Typescript"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
+                  alt="Sass icon"
+                  title="Sass"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                  alt="Node icon"
+                  class="node"
+                  title="Node.js"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="@/assets/images/jest_icon.svg"
+                  alt="Jest icon"
+                  class="jest"
+                  title="Jest Testing Framework"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg"
+                  alt="GraphQL icon"
+                  title="GraphQL"
+                />
+              </div>
+              <div class="icon-wrapper">
+                <img
+                  src="@/assets/images/tailwind_icon.svg"
+                  alt="Tailwind CSS icon"
+                  title="TailwindCSS"
+                />
+              </div>
             </div>
 
             <a href="#recentWorkSection" class="projectsLink">
@@ -110,6 +136,11 @@
       <div class="container">
         <div class="heading-container">
           <SectionHeading mb="8rem">Some Recent Work</SectionHeading>
+          <SectionCopy mb="8rem">
+            While most of my signifcant work has been done for employers and is
+            not displayed here (let's discuss these projects!), here are some
+            projects that live in my Github.
+          </SectionCopy>
         </div>
 
         <ProjectContainer />
@@ -266,9 +297,11 @@ section.aboutSection {
     @include breakpoint(ipadPro) {
       max-width: 70rem;
     }
-    @include breakpoint(mobile) {
-      font-size: 1.8rem;
+    @include breakpoint(tablet-land) {
       text-align: left;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
     }
 
     &:first-of-type {
@@ -276,7 +309,7 @@ section.aboutSection {
     }
 
     .accent {
-      color: var(--primary-color);
+      color: var(--tertiary-color);
       font-weight: 400;
     }
   }
@@ -289,6 +322,10 @@ section.aboutSection {
     @include breakpoint(ipadPro) {
       justify-content: center;
     }
+    .icon-wrapper {
+      text-align: center;
+      min-width: 90px;
+    }
     img {
       margin: 0 2rem 3rem 0;
       width: 50px;
@@ -296,7 +333,7 @@ section.aboutSection {
         width: 40px;
       }
       &.react {
-        width: 70px;
+        width: 60px;
         margin: 0 1rem 3rem -1rem;
       }
       &.node {

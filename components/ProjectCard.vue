@@ -19,12 +19,12 @@
       </div>
 
       <div class="controls">
-        <AppButton color="secondary">
-          <a :href="props.project.sourceCodeUrl" target="_blank">View Code</a>
-        </AppButton>
-        <AppButton color="primary">
-          <a :href="props.project.demoUrl" target="_blank">Demo</a>
-        </AppButton>
+        <a :href="props.project.sourceCodeUrl" target="_blank"
+          ><AppButton color="secondary">View Code</AppButton></a
+        >
+        <a :href="props.project.demoUrl" target="_blank">
+          <AppButton color="primary">Demo</AppButton>
+        </a>
       </div>
     </div>
   </div>
