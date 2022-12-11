@@ -17,10 +17,6 @@
     <!-- Websites & Landing Pages -->
     <div class="projectInfo">
       <SectionSubHeading>Websites & Landing Pages</SectionSubHeading>
-      <SectionCopy mb="4rem">
-        A handful of websites/landing pages I have completed for employers or as
-        side projects to build up my own design systems and component library.
-      </SectionCopy>
     </div>
     <div v-if="websites.length" class="project-cards">
       <ProjectCard

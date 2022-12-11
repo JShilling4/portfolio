@@ -7,7 +7,10 @@
     <div class="content">
       <div class="info-container">
         <p class="description">
-          {{ props.project.description }}
+          {{ props.project.description }} <br />
+          <span class="tech-list"
+            >({{ props.project.technology.join(", ") }})</span
+          >
         </p>
         <div class="controls">
           <AppButton color="secondary">
@@ -66,9 +69,10 @@ const mobileImage = computed(() => {
 @import "../assets/scss/mixins";
 
 .project {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.18);
   padding: 4rem;
   border-radius: 10px;
+  border: 1px solid var(--secondary-color-faded);
   width: 100%;
   margin-bottom: 8rem;
 
@@ -128,9 +132,14 @@ const mobileImage = computed(() => {
       @include breakpoint(tablet-land) {
         margin-top: 2rem;
         font-weight: 200;
+        text-align: left;
       }
       @include breakpoint(mobile) {
         font-size: 14px;
+      }
+      .tech-list {
+        color: white;
+        opacity: 0.4;
       }
     }
     .controls {
