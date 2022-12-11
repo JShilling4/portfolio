@@ -66,16 +66,24 @@ const mobileImage = computed(() => {
 @import "../assets/scss/mixins";
 
 .project {
-  min-height: 34rem;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 4rem;
   border-radius: 10px;
   width: 100%;
   margin-bottom: 8rem;
 
+  @include breakpoint(ipadPro) {
+    min-height: 32rem;
+  }
+
+  @include breakpoint(tablet-land) {
+    width: 80%;
+  }
+
   @include breakpoint(mobile) {
-    padding: 4rem 1rem;
+    padding: 4rem 1.5rem;
     margin-bottom: 4rem;
+    width: 100%;
   }
 
   h3.title {
@@ -119,6 +127,10 @@ const mobileImage = computed(() => {
       font-size: 1.6rem;
       @include breakpoint(tablet-land) {
         margin-top: 2rem;
+        font-weight: 200;
+      }
+      @include breakpoint(mobile) {
+        font-size: 14px;
       }
     }
     .controls {
@@ -142,8 +154,12 @@ const mobileImage = computed(() => {
       width: 35%;
     }
     @include breakpoint(tablet-land) {
-      width: 80%;
+      height: initial;
       margin: 8rem auto 4rem;
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      margin: 4rem auto 2rem;
     }
   }
   .desktopImage {
@@ -154,26 +170,23 @@ const mobileImage = computed(() => {
     height: 100%;
     img {
       object-fit: contain;
-      /* height: 90%; */
-      width: 355px;
       border-radius: 10px;
     }
   }
   .mobileImage {
     position: absolute;
     z-index: 5;
-    /* border-radius: 30px; */
     right: -9rem;
-    top: -6rem;
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
-    width: 160px;
+    top: 50%;
+    box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 30%);
+    width: 132px;
+    transform: translateY(-50%);
     @include breakpoint(ipadPro) {
       width: 100px;
-      top: -3rem;
     }
     @include breakpoint(tablet-land) {
-      right: 4rem;
-      width: 120px;
+      right: 1rem;
+      width: 100px;
     }
   }
 }

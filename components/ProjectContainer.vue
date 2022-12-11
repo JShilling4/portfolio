@@ -2,7 +2,7 @@
   <div class="project-container">
     <!-- Web & Mobile Applications -->
     <div class="projectInfo">
-      <SectionSubHeading>Web & Mobile Applications</SectionSubHeading>
+      <SectionSubHeading>Web Applications</SectionSubHeading>
     </div>
     <div v-if="applications.length" class="project-cards">
       <ProjectFeature
@@ -57,6 +57,11 @@ const applications = projectsStore.applications;
     margin-left: 2rem;
     @include breakpoint(tablet-land) {
       margin: 0;
+    }
+    p {
+      @include breakpoint(mobile) {
+        font-size: 16px;
+      }
     }
   }
 }

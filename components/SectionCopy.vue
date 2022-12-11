@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<PropTypes>(), {
   width: "100%",
 });
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/scss/mixins";
 
 p {
@@ -29,6 +29,11 @@ p {
   font-size: 1.8rem;
   @include breakpoint(tablet-land) {
     text-align: center;
+    width: 80% !important;
+    margin: 0 auto;
+  }
+  @include breakpoint(mobile) {
+    width: 100% !important;
   }
 }
 </style>

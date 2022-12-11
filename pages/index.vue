@@ -266,9 +266,11 @@ section.aboutSection {
     @include breakpoint(ipadPro) {
       max-width: 70rem;
     }
-    @include breakpoint(mobile) {
-      font-size: 1.8rem;
+    @include breakpoint(tablet-land) {
       text-align: left;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
     }
 
     &:first-of-type {
