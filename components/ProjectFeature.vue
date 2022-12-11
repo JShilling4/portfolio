@@ -13,7 +13,7 @@
           <AppButton color="secondary">
             <a :href="props.project.sourceCodeUrl" target="_blank">View Code</a>
           </AppButton>
-          <AppButton color="primary">
+          <AppButton v-if="props.project.isActive" color="primary">
             <a :href="props.project.demoUrl" target="_blank">See Live</a>
           </AppButton>
         </div>

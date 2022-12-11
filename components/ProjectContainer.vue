@@ -7,7 +7,7 @@
     <div v-if="applications.length" class="project-cards">
       <ProjectFeature
         v-for="project in applications"
-        :key="project.id"
+        :key="project.title"
         :project="project"
       />
       <div class="fillerCard"></div>
@@ -25,7 +25,7 @@
     <div v-if="websites.length" class="project-cards">
       <ProjectCard
         v-for="project in websites"
-        :key="project.id"
+        :key="project.title"
         :project="project"
       />
       <div class="fillerCard"></div>

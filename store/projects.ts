@@ -7,12 +7,29 @@ export const useProjectsStore = defineStore({
     return {
       projects: [
         {
-          id: 1,
+          title: "Band Manager",
+          type: "webapp",
+          isActive: false,
+          description:
+            "I created this application to help manage the backing tracks, sets, and calendar of music duo Whiskey Midnight. (Vue3, Typescript, Pinia, Firebase)",
+          desktopImage: {
+            filename: "bandManager-desktop.PNG",
+            altText: "Desktop Screenshot of Band Manager",
+          },
+          mobileImage: {
+            filename: "",
+            altText: "Mobile Screenshot of Band Manager",
+          },
+          sourceCodeUrl: "https://github.com/JShilling4/band-manager",
+          demoUrl: "",
+          technology: ["Vue3", "Typescript", "Pinia", "Firebase"],
+        },
+        {
           title: "IP Geolocator",
           type: "webapp",
           isActive: true,
           description:
-            "Side project web app that takes a domain or IP address and returns information about the IP address. I used Svelte for the JS and Sass for styles.",
+            "Side project web app that takes a domain or IP address and returns information about the IP address. (Svelte, Scss)",
           desktopImage: {
             filename: "ip-geolocator-desktop.png",
             altText: "Desktop Screenshot of IP Geolocator Project",
@@ -26,7 +43,6 @@ export const useProjectsStore = defineStore({
           technology: ["Svelte", "Axios", "Sass"],
         },
         {
-          id: 2,
           title: "Blogr Landing Page",
           type: "website",
           isActive: true,
@@ -41,10 +57,9 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/blogr-landing-page",
           demoUrl: "https://justinshilling-blogr-landing-page.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue", "Scss"],
         },
         // {
-        //     id: 6,
         //     title: "Country Look-up",
         //     type: "webapp",
         //     isActive: true,
@@ -62,7 +77,6 @@ export const useProjectsStore = defineStore({
         //     technology: ["React", "Styled Components", "Axios"],
         // },
         {
-          id: 3,
           title: "Easybank Landing Page",
           type: "website",
           isActive: true,
@@ -77,10 +91,9 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/easybank-landing-page",
           demoUrl: "https://justinshilling-easybank-landing-page.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue", "Scss"],
         },
         {
-          id: 4,
           title: "Whiskey Midnight Band Page",
           type: "website",
           isActive: true,
@@ -95,10 +108,9 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/band-manager",
           demoUrl: "https://whiskeymidnight.com",
-          technology: ["Nuxt", "Typescript", "Sass"],
+          technology: ["Nuxt", "Typescript", "Scss"],
         },
         {
-          id: 5,
           title: "Manage Landing Page",
           type: "website",
           isActive: true,
@@ -113,15 +125,14 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/manage-landing-page",
           demoUrl: "https://justinshilling-manage-landing-page.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue", "Scss"],
         },
         {
-          id: 6,
           title: "Mortgage Calculator",
           type: "webapp",
           isActive: true,
           description:
-            "I built this web app for Ruoff Mortgage when a reactive mortgage calculator was needed for ruoff.com. I used Vue for the JS and Sass for styles.",
+            "I built this web app for Ruoff Mortgage when a reactive mortgage calculator was needed for ruoff.com. (Vue2/Scss)",
           desktopImage: {
             filename: "mortgage-calculator-desktop.png",
             altText: "Desktop Screenshot of Mortgage Calculator",
@@ -132,10 +143,9 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/mortgage-calculator",
           demoUrl: "https://justinshilling-mortgage-calculator.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue", "Scss"],
         },
         // {
-        //     id: 7,
         //     title: "Music Hub",
         //     type: "webapp",
         //     isActive: true,
