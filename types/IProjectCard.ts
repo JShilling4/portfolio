@@ -10,7 +10,7 @@ export interface IProjectCard {
   mobileImage: {
     filename: string;
     altText: string;
-  };
+  } | null;
   sourceCodeUrl: string;
   demoUrl: string;
   technology: string[];

@@ -22,7 +22,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/band-manager",
           demoUrl: "",
-          technology: ["Vue3", "Typescript", "Pinia", "Firebase", "HowlerJS"],
+          technology: ["Vue3", "Typescript", "Firebase", "HowlerJS"],
         },
         {
           title: "IP Geolocator",
@@ -57,7 +57,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/blogr-landing-page",
           demoUrl: "https://justinshilling-blogr-landing-page.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue2", "Sass"],
         },
         // {
         //     title: "Country Look-up",
@@ -77,6 +77,21 @@ export const useProjectsStore = defineStore({
         //     technology: ["React", "Styled Components", "Axios"],
         // },
         {
+          title: "Portfolio (Live)",
+          type: "website",
+          isActive: false,
+          description: "",
+          desktopImage: {
+            filename: "portfolio-desktop.PNG",
+            altText:
+              "Desktop Screenshot of Justin Shilling's portfolio website",
+          },
+          mobileImage: null,
+          sourceCodeUrl: "https://github.com/JShilling4/easybank-landing-page",
+          demoUrl: "https://justinshilling-easybank-landing-page.netlify.app/",
+          technology: ["Nuxt3", "Typescript", "Pinia"],
+        },
+        {
           title: "Easybank (Demo)",
           type: "website",
           isActive: true,
@@ -91,7 +106,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/easybank-landing-page",
           demoUrl: "https://justinshilling-easybank-landing-page.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue2", "Sass"],
         },
         {
           title: "Whiskey Midnight (Live)",
@@ -108,7 +123,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/band-manager",
           demoUrl: "https://whiskeymidnight.com",
-          technology: ["Nuxt", "Typescript", "Sass"],
+          technology: ["Nuxt3", "Typescript", "Sass"],
         },
         {
           title: "Manage (Demo)",
@@ -125,7 +140,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/manage-landing-page",
           demoUrl: "https://justinshilling-manage-landing-page.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue2", "Sass"],
         },
         {
           title: "Mortgage Calculator",
@@ -143,7 +158,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/mortgage-calculator",
           demoUrl: "https://justinshilling-mortgage-calculator.netlify.app/",
-          technology: ["Vue", "Sass"],
+          technology: ["Vue2", "Sass"],
         },
         // {
         //     title: "Music Hub",

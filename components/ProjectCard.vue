@@ -22,7 +22,11 @@
         <a :href="props.project.sourceCodeUrl" target="_blank"
           ><AppButton color="secondary">View Code</AppButton></a
         >
-        <a :href="props.project.demoUrl" target="_blank">
+        <a
+          v-if="props.project.isActive"
+          :href="props.project.demoUrl"
+          target="_blank"
+        >
           <AppButton color="primary">Demo</AppButton>
         </a>
       </div>
@@ -60,6 +64,7 @@ const projectImage = computed(() => {
   width: 375px;
   height: 225px;
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 4rem;
   @include breakpoint(tablet-port) {
     width: 350px;
