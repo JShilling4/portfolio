@@ -1,5 +1,4 @@
 export interface IProjectCard {
-  id: number;
   title: string;
   type: string;
   isActive: boolean;

@@ -33,11 +33,11 @@
 
             <p class="copy">
               I <span class="accent">love</span> working in a profession where I
-              can <span class="accent">satisfy</span> the tug of war between the
-              left & right sides of my brain. There is nothing more
+              can satisfy the tug of war between the left & right sides of my
+              brain. There is nothing more
               <span class="accent">fulfulling</span> to me than being able to
-              solve problems through <span class="accent">code</span> and create
-              a work of <span class="accent">art</span> at the same time!
+              solve problems with <span class="accent">code</span> and create a
+              work of <span class="accent">art</span> at the same time!
             </p>
 
             <SectionHeading align="left" mb="2rem"> Skills </SectionHeading>
