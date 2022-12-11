@@ -11,7 +11,7 @@ export const useProjectsStore = defineStore({
           type: "webapp",
           isActive: false,
           description:
-            "I created this application to help manage the backing tracks, sets, and calendar of music duo Whiskey Midnight. (Vue3, Typescript, Pinia, Firebase)",
+            "Application to upload/edit/listen to backing tracks, organize sets, and manage a gig calendar. Created for music duo Whiskey Midnight. (Vue3, Typescript, Pinia, Firebase, HowlerJs)",
           desktopImage: {
             filename: "bandManager-desktop.PNG",
             altText: "Desktop Screenshot of Band Manager",
@@ -29,7 +29,7 @@ export const useProjectsStore = defineStore({
           type: "webapp",
           isActive: true,
           description:
-            "Side project web app that takes a domain or IP address and returns information about the IP address. (Svelte, Scss)",
+            "Takes a domain or IP address and returns information about the IP address. (Svelte, Sass)",
           desktopImage: {
             filename: "ip-geolocator-desktop.png",
             altText: "Desktop Screenshot of IP Geolocator Project",
@@ -91,13 +91,13 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/easybank-landing-page",
           demoUrl: "https://justinshilling-easybank-landing-page.netlify.app/",
-          technology: ["Vue", "Scss"],
+          technology: ["Vue", "Sass"],
         },
         {
           title: "Whiskey Midnight Band Page",
           type: "website",
           isActive: true,
-          description: "Landing page for the band duo Whiskey Midnight",
+          description: "Landing page for the music duo Whiskey Midnight",
           desktopImage: {
             filename: "whiskeyMidnight-desktop.PNG",
             altText: "Desktop Screenshot of Whiskey Midnight home page",
@@ -108,7 +108,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/band-manager",
           demoUrl: "https://whiskeymidnight.com",
-          technology: ["Nuxt", "Typescript", "Scss"],
+          technology: ["Nuxt", "Typescript", "Sass"],
         },
         {
           title: "Manage Landing Page",
@@ -125,14 +125,14 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/manage-landing-page",
           demoUrl: "https://justinshilling-manage-landing-page.netlify.app/",
-          technology: ["Vue", "Scss"],
+          technology: ["Vue", "Sass"],
         },
         {
           title: "Mortgage Calculator",
           type: "webapp",
           isActive: true,
           description:
-            "I built this web app for Ruoff Mortgage when a reactive mortgage calculator was needed for ruoff.com. (Vue2/Scss)",
+            "Reactive mortgage calculator built as widget for B2C websites and applications while at Ruoff Mortgage. (Vue2/Scss)",
           desktopImage: {
             filename: "mortgage-calculator-desktop.png",
             altText: "Desktop Screenshot of Mortgage Calculator",
@@ -143,7 +143,7 @@ export const useProjectsStore = defineStore({
           },
           sourceCodeUrl: "https://github.com/JShilling4/mortgage-calculator",
           demoUrl: "https://justinshilling-mortgage-calculator.netlify.app/",
-          technology: ["Vue", "Scss"],
+          technology: ["Vue", "Sass"],
         },
         // {
         //     title: "Music Hub",
