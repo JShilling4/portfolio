@@ -87,8 +87,8 @@ export const useProjectsStore = defineStore({
               "Desktop Screenshot of Justin Shilling's portfolio website",
           },
           mobileImage: null,
-          sourceCodeUrl: "https://github.com/JShilling4/easybank-landing-page",
-          demoUrl: "https://justinshilling-easybank-landing-page.netlify.app/",
+          sourceCodeUrl: "https://github.com/JShilling4/portfolio",
+          demoUrl: "",
           technology: ["Nuxt3", "Typescript", "Pinia"],
         },
         {
