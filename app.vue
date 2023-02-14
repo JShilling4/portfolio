@@ -1,13 +1,15 @@
 <template>
   <TheHeader
-    v-if="$route.path !== '/surprise'"
+    v-if="$route.path !== '/surprise' && $route.path !== '/surprise/'"
     class="outer-container"
     :show-mobile-menu="showMobileMenu || windowWidth > 768"
     @open="showMobileMenu = true"
     @close="showMobileMenu = false"
   />
   <NuxtPage />
-  <TheFooter v-if="$route.path !== '/surprise'" />
+  <TheFooter
+    v-if="$route.path !== '/surprise' && $route.path !== '/surprise/'"
+  />
 </template>
 
 <script setup lang="ts">
