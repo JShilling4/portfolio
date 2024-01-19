@@ -691,8 +691,8 @@ packages:
     dependencies:
       '@nuxt/kit': 3.0.0(rollup@2.79.1)
       '@rollup/plugin-replace': 5.0.1(rollup@2.79.1)
-      '@vitejs/plugin-vue': 3.2.0(vite@3.2.7)(vue@3.2.45)
-      '@vitejs/plugin-vue-jsx': 2.1.1(vite@3.2.7)(vue@3.2.45)
+      '@vitejs/plugin-vue': 3.2.0(vite@3.2.8)(vue@3.2.45)
+      '@vitejs/plugin-vue-jsx': 2.1.1(vite@3.2.8)(vue@3.2.45)
       autoprefixer: 10.4.13(postcss@8.4.31)
       chokidar: 3.5.3
       cssnano: 5.1.14(postcss@8.4.31)
@@ -718,9 +718,9 @@ packages:
       rollup-plugin-visualizer: 5.8.3(rollup@2.79.1)
       ufo: 1.0.1
       unplugin: 1.0.0
-      vite: 3.2.7(@types/node@18.11.12)(sass@1.56.2)
+      vite: 3.2.8(@types/node@18.11.12)(sass@1.56.2)
       vite-node: 0.25.6(@types/node@18.11.12)(sass@1.56.2)
-      vite-plugin-checker: 0.5.1(eslint@8.29.0)(typescript@4.9.4)(vite@3.2.7)
+      vite-plugin-checker: 0.5.1(eslint@8.29.0)(typescript@4.9.4)(vite@3.2.8)
       vue: 3.2.45
       vue-bundle-renderer: 1.0.0
     transitivePeerDependencies:
@@ -1110,7 +1110,7 @@ packages:
       - encoding
       - supports-color
 
-  /@vitejs/plugin-vue-jsx@2.1.1(vite@3.2.7)(vue@3.2.45):
+  /@vitejs/plugin-vue-jsx@2.1.1(vite@3.2.8)(vue@3.2.45):
     resolution: {integrity: sha512-JgDhxstQlwnHBvZ1BSnU5mbmyQ14/t5JhREc6YH5kWyu2QdAAOsLF6xgHoIWarj8tddaiwFrNzLbWJPudpXKYA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1120,19 +1120,19 @@ packages:
       '@babel/core': 7.20.5
       '@babel/plugin-transform-typescript': 7.20.2(@babel/core@7.20.5)
       '@vue/babel-plugin-jsx': 1.1.1(@babel/core@7.20.5)
-      vite: 3.2.7(@types/node@18.11.12)(sass@1.56.2)
+      vite: 3.2.8(@types/node@18.11.12)(sass@1.56.2)
       vue: 3.2.45
     transitivePeerDependencies:
       - supports-color
 
-  /@vitejs/plugin-vue@3.2.0(vite@3.2.7)(vue@3.2.45):
+  /@vitejs/plugin-vue@3.2.0(vite@3.2.8)(vue@3.2.45):
     resolution: {integrity: sha512-E0tnaL4fr+qkdCNxJ+Xd0yM31UwMkQje76fsDVBBUCoGOUPexu2VDUYHL8P4CwV+zMvWw6nlRw19OnRKmYAJpw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.2.7(@types/node@18.11.12)(sass@1.56.2)
+      vite: 3.2.8(@types/node@18.11.12)(sass@1.56.2)
       vue: 3.2.45
 
   /@vue/babel-helper-vue-transform-on@1.0.2:
@@ -4866,7 +4866,7 @@ packages:
       pathe: 0.2.0
       source-map: 0.6.1
       source-map-support: 0.5.21
-      vite: 3.2.7(@types/node@18.11.12)(sass@1.56.2)
+      vite: 3.2.8(@types/node@18.11.12)(sass@1.56.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4876,7 +4876,7 @@ packages:
       - supports-color
       - terser
 
-  /vite-plugin-checker@0.5.1(eslint@8.29.0)(typescript@4.9.4)(vite@3.2.7):
+  /vite-plugin-checker@0.5.1(eslint@8.29.0)(typescript@4.9.4)(vite@3.2.8):
     resolution: {integrity: sha512-NFiO1PyK9yGuaeSnJ7Whw9fnxLc1AlELnZoyFURnauBYhbIkx9n+PmIXxSFUuC9iFyACtbJQUAEuQi6yHs2Adg==}
     engines: {node: '>=14.16'}
     peerDependencies:
@@ -4908,14 +4908,14 @@ packages:
       strip-ansi: 6.0.1
       tiny-invariant: 1.3.1
       typescript: 4.9.4
-      vite: 3.2.7(@types/node@18.11.12)(sass@1.56.2)
+      vite: 3.2.8(@types/node@18.11.12)(sass@1.56.2)
       vscode-languageclient: 7.0.0
       vscode-languageserver: 7.0.0
       vscode-languageserver-textdocument: 1.0.8
       vscode-uri: 3.0.6
 
-  /vite@3.2.7(@types/node@18.11.12)(sass@1.56.2):
-    resolution: {integrity: sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==}
+  /vite@3.2.8(@types/node@18.11.12)(sass@1.56.2):
+    resolution: {integrity: sha512-EtQU16PLIJpAZol2cTLttNP1mX6L0SyI0pgQB1VOoWeQnMSvtiwovV3D6NcjN8CZQWWyESD2v5NGnpz5RvgOZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -5061,6 +5061,7 @@ packages:
 
   /vue@2.7.14:
     resolution: {integrity: sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==}
+    deprecated: Vue 2 has reached EOL and is no longer actively maintained. See https://v2.vuejs.org/eol/ for more details.
     dependencies:
       '@vue/compiler-sfc': 2.7.14
       csstype: 3.1.2
