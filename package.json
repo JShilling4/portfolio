@@ -8,28 +8,27 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@types/node": "^18.11.12",
-    "@typescript-eslint/eslint-plugin": "^5.46.0",
-    "@typescript-eslint/parser": "^5.46.0",
-    "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@types/node": "^20.11.15",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.8.0",
+    "eslint-plugin-vue": "^9.21.1",
     "nuxt": "3.0.0",
-    "prettier": "^2.8.1",
-    "sass": "^1.56.2",
-    "sass-loader": "^13.2.0",
-    "typescript": "^4.9.4"
+    "prettier": "^3.2.4",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.1",
-    "@fortawesome/free-brands-svg-icons": "^6.2.1",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/vue-fontawesome": "^3.0.2",
-    "@nuxtjs/composition-api": "^0.33.1",
-    "@pinia/nuxt": "^0.4.6",
-    "pinia": "^2.0.28",
-    "vue": "^3.2.45"
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@pinia/nuxt": "^0.5.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.15"
   }
 }
