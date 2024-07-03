@@ -8,6 +8,7 @@
         href="https://github.com/JShilling4"
         target="_blank"
         class="social-link"
+        aria-label="Github"
       >
         <FontAwesomeIcon :icon="['fab', 'github']" class="github" />
       </a>
@@ -15,6 +16,7 @@
         href="https://www.linkedin.com/in/justin-shilling/"
         class="social-link"
         target="blank"
+        aria-label="LinkedIn"
       >
         <FontAwesomeIcon :icon="['fab', 'linkedin']" class="linkedIn" />
       </a>
