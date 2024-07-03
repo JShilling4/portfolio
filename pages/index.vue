@@ -168,21 +168,19 @@
           >
             <input type="hidden" name="form-name" value="contact-form" />
             <InputGroup>
-              <FormLabel>Name/Company</FormLabel>
-              <TextInput v-model="contactForm.name" name="name" required />
+              <FormLabel for="name">Name/Company</FormLabel>
+              <TextInput v-model="contactForm.name" id="name" name="name" required />
             </InputGroup>
             <InputGroup>
-              <FormLabel>Email</FormLabel>
-              <TextInput v-model="contactForm.email" name="email" required />
+              <FormLabel for="email">Email</FormLabel>
+              <TextInput v-model="contactForm.email" id="email" name="email" required />
             </InputGroup>
             <InputGroup>
-              <FormLabel>Message</FormLabel>
-              <TextBox v-model="contactForm.message" name="message" required />
+              <FormLabel for="message">Message</FormLabel>
+              <TextBox v-model="contactForm.message" id="message" name="message" required />
             </InputGroup>
-
             <AppButton type="submit" class="secondary">Submit</AppButton>
           </form>
-
           <img src="@/assets/images/contact_vector.svg" alt="" />
         </div>
       </div>

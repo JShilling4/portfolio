@@ -1,6 +1,5 @@
 <template>
   <label
-    id="id"
     class="formLabel"
     :style="{
       display: props.isInline ? 'inline' : 'block',

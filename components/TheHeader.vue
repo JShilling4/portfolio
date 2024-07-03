@@ -87,6 +87,7 @@
             target="_blank"
             class="social-link"
             @click="closeMenu"
+            aria-label="Github"
           >
             <FontAwesomeIcon :icon="['fab', 'github']" class="github" />
           </a>
@@ -95,6 +96,7 @@
             class="social-link"
             target="blank"
             @click="closeMenu"
+            aria-label="LinkedIn"
           >
             <FontAwesomeIcon :icon="['fab', 'linkedin']" class="linkedIn" />
           </a>
