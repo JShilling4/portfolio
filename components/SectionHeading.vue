@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<PropTypes>(), {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
+@use "../assets/scss/mixins";
 
 .heading {
   position: relative;

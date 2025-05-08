@@ -40,7 +40,7 @@ const applications = projectsStore.applications;
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
+@use "../assets/scss/mixins";
 
 .project-container {
   padding: 0 7rem;

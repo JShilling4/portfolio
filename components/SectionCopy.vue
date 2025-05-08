@@ -20,8 +20,8 @@ const props = withDefaults(defineProps<PropTypes>(), {
   width: "100%",
 });
 </script>
+
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 p {
   color: #fff;

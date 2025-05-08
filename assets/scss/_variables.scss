@@ -1,17 +1,18 @@
 :root {
     --primary-color: rgb(15, 228, 217);
     --secondary-color: rgb(36, 133, 230);
-    --secondary-color-faded: rgba(36, 133, 230, .6);
+    --secondary-color-faded: rgb(36 133 230 / 60%);
     --tertiary-color: rgb(128, 189, 250);
-    --tertiary-color-faded: rgba(128, 189, 250, .6);
+    --tertiary-color-faded: rgb(128 189 250 / 60%);
     --input-font-color: #fff;
-    --input-bg-color: rgba(255, 255, 255, 0.315);
+    --input-bg-color: rgb(255 255 255 / 31.5%);
     --input-border-color: var(--secondary-color);
     --main-bg-color: rgb(13, 24, 33);
     --body-font-color: rgb(230, 230, 230);
     --body-bg-gradient: linear-gradient(to right, #2c2d3f, #3f4164);
     --main-container-width: 1400px;
-    --main-font: "Nunito Sans", sans-serif;
+    --main-font: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial, sans-serif;
     --input-border-radius: 5px;
-    --input-focus-shadow: 0 1px 1.2rem rgba(128, 189, 250, .6);
+    --input-focus-shadow: 0 1px 1.2rem rgb(128 189 250 / 60%);
 }

@@ -210,7 +210,6 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 .container {
   max-width: var(--main-container-width);

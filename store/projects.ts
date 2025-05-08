@@ -1,8 +1,7 @@
 import { defineStore } from "pinia";
-import { IProjectCard } from "~~/types/IProjectCard";
+import type { IProjectCard } from "~~/types/IProjectCard";
 
-export const useProjectsStore = defineStore({
-  id: "projects-store",
+export const useProjectsStore = defineStore("projects-store", {
   state: () => {
     return {
       projects: [
@@ -59,23 +58,6 @@ export const useProjectsStore = defineStore({
           demoUrl: "https://justinshilling-blogr-landing-page.netlify.app/",
           technology: ["Vue2", "Sass"],
         },
-        // {
-        //     title: "Country Look-up",
-        //     type: "webapp",
-        //     isActive: true,
-        //     description: "Side project web app that returns flag and country information with a search field. I used React for the JS & Styled Components for the styles.",
-        //     desktopImage: {
-        //         filename: "country-lookup-desktop.png",
-        //         altText: "Desktop Screenshot of Country Lookup App",
-        //     },
-        //     mobileImage: {
-        //         filename: "country-lookup-mobile.png",
-        //         altText: "Mobile Screenshot of Country Lookup App",
-        //     },
-        //     sourceCodeUrl: "https://github.com/JShilling4/country-lookup",
-        //     demoUrl: "https://justinshilling-country-lookup.netlify.app/",
-        //     technology: ["React", "Styled Components", "Axios"],
-        // },
         {
           title: "Portfolio (Live)",
           type: "website",
@@ -160,23 +142,6 @@ export const useProjectsStore = defineStore({
           demoUrl: "https://justinshilling-mortgage-calculator.netlify.app/",
           technology: ["Vue2", "Sass"],
         },
-        // {
-        //     title: "Music Hub",
-        //     type: "webapp",
-        //     isActive: true,
-        //     description: "Side project web app that stores and plays personal music collections. Features individual accounts & storage using Vue for the JS, Firebase for the back end, and Tailwind for styles.",
-        //     desktopImage: {
-        //         filename: "music-hub-desktop.png",
-        //         altText: "Desktop Screenshot of Music Hub App",
-        //     },
-        //     mobileImage: {
-        //         filename: "music-hub-mobile.png",
-        //         altText: "Mobile Screenshot of Music Hub App",
-        //     },
-        //     sourceCodeUrl: "https://github.com/JShilling4/music-hub",
-        //     demoUrl: "https://justinshilling-music-hub.netlify.app/",
-        //     technology: ["Vue", "Vuex", "Tailwind", "Firebase"],
-        // },
       ],
     };
   },

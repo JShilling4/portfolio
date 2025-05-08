@@ -55,7 +55,6 @@ const projectImage = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 .card {
   position: relative;

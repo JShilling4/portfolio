@@ -1,5 +1,4 @@
-
-@import "./variables";
-@import "./reset";
-@import "./base";
-@import "./typography";
+@use 'variables' as *;
+@use 'reset' as *;
+@use 'base' as *;
+@use 'typography' as *;
