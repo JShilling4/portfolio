@@ -29,7 +29,7 @@
         <img
           v-if="mobileImage"
           :src="mobileImage"
-          :alt="props.project.mobileImage.altText"
+          :alt="props.project.mobileImage?.altText"
           class="mobileImage"
         />
       </div>
@@ -57,7 +57,7 @@ const desktopImage = computed(() => {
 });
 
 const mobileImage = computed(() => {
-  if (!props?.project?.mobileImage.filename) return null;
+  if (!props?.project?.mobileImage?.filename) return null;
   return new URL(
     `/assets/images/${props.project.mobileImage.filename}`,
     import.meta.url
@@ -66,7 +66,6 @@ const mobileImage = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 .project {
   background-color: rgba(0, 0, 0, 0.18);

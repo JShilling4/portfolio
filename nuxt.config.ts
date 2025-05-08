@@ -2,13 +2,21 @@
 export default defineNuxtConfig({
   plugins: ["plugins/fontawesome.ts"],
   modules: ["@pinia/nuxt"],
+
   build: {
-    transpile: [
-      "@fortawesome/vue-fontawesome",
-      "@fortawesome/fontawesome-svg-core",
-      "@fortawesome/free-brands-svg-icons",
-    ],
+    transpile: ['@fortawesome/fontawesome-svg-core'],
   },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/scss/_mixins.scss" as *;',
+        }
+      }
+    }
+  },
+
   app: {
     // document head injections
     head: {
@@ -34,9 +42,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: [
-    "@fortawesome/fontawesome-svg-core/styles.css",
     "@/assets/scss/main.scss",
   ],
+
   ssr: false,
+  compatibilityDate: "2025-02-14",
 });

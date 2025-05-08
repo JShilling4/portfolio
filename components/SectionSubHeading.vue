@@ -5,7 +5,6 @@
 </template>
 
 <style lang="scss">
-@import "../assets/scss/mixins";
 
 h3 {
   color: #fff;

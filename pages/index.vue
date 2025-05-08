@@ -31,11 +31,11 @@
           <div>
             <SectionHeading align="left" mb="2rem"> About Me </SectionHeading>
             <p class="copy">
-              In the first 5 years of my career as a
-              <span class="accent">Frontend Engineer</span>, I have had the
-              great pleasure of significantly contributing to the front-end of
-              over 15 B2C websites and several applications including marketing
-              & e-commerce platforms. <br />
+              In the first 7 years of my career as a
+              <span class="accent">Frontend Software Developer</span>, I have had the
+              opportunities to significantly contribute and/or lead the development for the front-end of
+              over 15 B2C websites, marketing
+              & e-commerce platforms, website design/creation software, admin dashboards, live preview HTML builder/scheduler, a CMS and more!. <br />
               <span class="accent">Frontend development</span> satisfies the tug
               of war between the left & right sides of my brain. It has truly
               become a <span class="accent">passion</span> of mine to solve
@@ -46,8 +46,7 @@
             <SectionHeading align="left" mb="2rem"> Skills </SectionHeading>
             <p class="copy">
               Here are some of the <span class="accent">technologies</span> I
-              have used working on projects for Ruoff Mortgage, Juniper by IMC
-              and freelance:
+              have been using frequently for employers and on freelance projects:
             </p>
 
             <div class="icon-container">
@@ -210,7 +209,6 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 .container {
   max-width: var(--main-container-width);

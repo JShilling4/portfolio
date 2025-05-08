@@ -89,7 +89,7 @@
             @click="closeMenu"
             aria-label="Github"
           >
-            <FontAwesomeIcon :icon="['fab', 'github']" class="github" />
+            <FontAwesomeIcon :icon="['fab', 'github']" class="social-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/justin-shilling/"
@@ -98,7 +98,7 @@
             @click="closeMenu"
             aria-label="LinkedIn"
           >
-            <FontAwesomeIcon :icon="['fab', 'linkedin']" class="linkedIn" />
+            <FontAwesomeIcon :icon="['fab', 'linkedin']" class="social-icon" />
           </a>
         </div>
       </nav>
@@ -137,7 +137,6 @@ function closeMenu() {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 .header {
   position: absolute;
@@ -239,29 +238,37 @@ function closeMenu() {
 
     .social-link {
       color: var(--secondary-color);
-      font-size: 4rem;
-      margin-left: 2rem;
       transition: color 0.3s;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+
+      svg {
+        width: 1.8rem !important;
+        height: 1.8rem !important;
+      }
+
       @include breakpoint(tablet-land) {
         color: rgba(255, 255, 255, 0.7);
-        font-size: 3rem;
+        margin: 2rem 1rem;
+
+        svg {
+          width: 2.2rem !important;
+          height: 2.2rem !important;
+        }
       }
+
       @include breakpoint(mobile) {
-        font-size: 4rem;
+        svg {
+          width: 2.4rem !important;
+          height: 2.4rem !important;
+        }
       }
 
       &:hover {
         color: var(--tertiary-color);
         @include breakpoint(tablet-land) {
           color: #fff;
-        }
-      }
-
-      &:not(:last-child) {
-        margin-left: 4rem;
-        @include breakpoint(tablet-land) {
-          display: inline-block;
-          margin: 4rem 4rem 0 0;
         }
       }
     }

@@ -5,7 +5,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
 
 section {
   padding: 12rem 4rem;
