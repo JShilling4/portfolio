@@ -12,11 +12,6 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: '@use "@/assets/scss/_mixins.scss" as *;',
-          sassOptions: {
-            outputStyle: 'compressed',
-            sourceMap: true,
-            quietDeps: true // This should suppress the deprecation warnings
-          }
         }
       }
     }
