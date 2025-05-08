@@ -91,23 +91,6 @@ export const useProjectsStore = defineStore("projects-store", {
           technology: ["Vue2", "Sass"],
         },
         {
-          title: "Whiskey Midnight (Live)",
-          type: "website",
-          isActive: true,
-          description: "Landing page for the music duo Whiskey Midnight",
-          desktopImage: {
-            filename: "whiskeyMidnight-desktop.PNG",
-            altText: "Desktop Screenshot of Whiskey Midnight home page",
-          },
-          mobileImage: {
-            filename: "",
-            altText: "",
-          },
-          sourceCodeUrl: "https://github.com/JShilling4/band-manager",
-          demoUrl: "https://whiskeymidnight.com",
-          technology: ["Nuxt3", "Typescript", "Sass"],
-        },
-        {
           title: "Manage (Demo)",
           type: "website",
           isActive: true,
