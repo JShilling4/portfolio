@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   plugins: ["plugins/fontawesome.ts"],
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt","@nuxt/eslint"],
 
   build: {
     transpile: ['@fortawesome/fontawesome-svg-core'],
@@ -36,10 +36,6 @@ export default defineNuxtConfig({
       script: [],
       style: [],
       link: [],
-      noscript: [
-        // <noscript>Javascript is required</noscript>
-        { children: "Javascript is required" },
-      ],
     },
   },
 

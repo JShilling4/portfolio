@@ -168,15 +168,15 @@
             <input type="hidden" name="form-name" value="contact-form" />
             <InputGroup>
               <FormLabel for="name">Name/Company</FormLabel>
-              <TextInput v-model="contactForm.name" id="name" name="name" required />
+              <TextInput id="name" v-model="contactForm.name" name="name" required />
             </InputGroup>
             <InputGroup>
               <FormLabel for="email">Email</FormLabel>
-              <TextInput v-model="contactForm.email" id="email" name="email" required />
+              <TextInput id="email" v-model="contactForm.email" name="email" required />
             </InputGroup>
             <InputGroup>
               <FormLabel for="message">Message</FormLabel>
-              <TextBox v-model="contactForm.message" id="message" name="message" required />
+              <TextBox id="message" v-model="contactForm.message" name="message" required />
             </InputGroup>
             <AppButton type="submit" class="secondary">Submit</AppButton>
           </form>

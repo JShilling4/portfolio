@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 export type PropTypes = {
-  height: string;
+  height?: string;
 };
 
 const props = withDefaults(defineProps<PropTypes>(), {

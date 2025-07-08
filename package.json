@@ -5,22 +5,27 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
-    "@types/node": "^20.19.2",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.1",
+    "@nuxt/eslint": "^1.5.2",
+    "@types/node": "^24.0.11",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "eslint": "^9.30.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.33.0",
-    "nuxt": "^3.17.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-vue": "^10.3.0",
+    "nuxt": "^3.17.6",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.0.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -30,12 +35,5 @@
     "@pinia/nuxt": "^0.10.1",
     "pinia": "^3.0.3",
     "vue": "^3.5.17"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "vue-demi"
-    ]
   }
 }

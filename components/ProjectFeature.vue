@@ -41,7 +41,7 @@
 import type { IProjectCard } from "../types/IProjectCard";
 
 export type PropTypes = {
-  project: IProjectCard | null;
+  project?: IProjectCard | null;
 };
 
 const props = withDefaults(defineProps<PropTypes>(), {

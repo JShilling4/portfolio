@@ -86,8 +86,8 @@
             href="https://github.com/JShilling4"
             target="_blank"
             class="social-link"
-            @click="closeMenu"
             aria-label="Github"
+            @click="closeMenu"
           >
             <FontAwesomeIcon :icon="['fab', 'github']" class="social-icon" />
           </a>
@@ -95,8 +95,8 @@
             href="https://www.linkedin.com/in/justin-shilling/"
             class="social-link"
             target="blank"
-            @click="closeMenu"
             aria-label="LinkedIn"
+            @click="closeMenu"
           >
             <FontAwesomeIcon :icon="['fab', 'linkedin']" class="social-icon" />
           </a>
@@ -127,8 +127,7 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: "close"): void;
-  (e: "open"): void;
+  (e: "close" | "open"): void;
 }>();
 
 function closeMenu() {
