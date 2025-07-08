@@ -32,10 +32,12 @@
             <SectionHeading align="left" mb="2rem"> About Me </SectionHeading>
             <p class="copy">
               In the first 7 years of my career as a
-              <span class="accent">Frontend Software Developer</span>, I have had the
-              opportunities to significantly contribute and/or lead the development for the front-end of
-              over 15 B2C websites, marketing
-              & e-commerce platforms, website design/creation software, admin dashboards, live preview HTML builder/scheduler, a CMS and more!. <br />
+              <span class="accent">Frontend Software Developer</span>, I have
+              had the opportunities to significantly contribute and/or lead the
+              development for the front-end of over 15 B2C websites, marketing &
+              e-commerce platforms, website design/creation software, admin
+              dashboards, live preview HTML builder/scheduler, a CMS and more!.
+              <br />
               <span class="accent">Frontend development</span> satisfies the tug
               of war between the left & right sides of my brain. It has truly
               become a <span class="accent">passion</span> of mine to solve
@@ -46,7 +48,8 @@
             <SectionHeading align="left" mb="2rem"> Skills </SectionHeading>
             <p class="copy">
               Here are some of the <span class="accent">technologies</span> I
-              have been using frequently for employers and on freelance projects:
+              have been using frequently for employers and on freelance
+              projects:
             </p>
 
             <div class="icon-container">
@@ -168,15 +171,30 @@
             <input type="hidden" name="form-name" value="contact-form" />
             <InputGroup>
               <FormLabel for="name">Name/Company</FormLabel>
-              <TextInput id="name" v-model="contactForm.name" name="name" required />
+              <TextInput
+                id="name"
+                v-model="contactForm.name"
+                name="name"
+                required
+              />
             </InputGroup>
             <InputGroup>
               <FormLabel for="email">Email</FormLabel>
-              <TextInput id="email" v-model="contactForm.email" name="email" required />
+              <TextInput
+                id="email"
+                v-model="contactForm.email"
+                name="email"
+                required
+              />
             </InputGroup>
             <InputGroup>
               <FormLabel for="message">Message</FormLabel>
-              <TextBox id="message" v-model="contactForm.message" name="message" required />
+              <TextBox
+                id="message"
+                v-model="contactForm.message"
+                name="message"
+                required
+              />
             </InputGroup>
             <AppButton type="submit" class="secondary">Submit</AppButton>
           </form>
@@ -205,11 +223,11 @@ useHead({
         "Senior Frontend Developer with extensive experience building production websites & interactive web applications. I can consistently turn designs into front ends that are responsive, elegant, performant, and pixel perfect. ",
     },
   ],
+  noscript: ["JavaScript is required for this site."],
 });
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   max-width: var(--main-container-width);
   margin: 0 auto;
