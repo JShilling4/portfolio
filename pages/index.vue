@@ -213,18 +213,6 @@ const contactForm = ref<IContactForm>({
   email: null,
   message: null,
 });
-
-useHead({
-  title: "Justin Shilling - Frontend Developer",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Senior Frontend Developer with extensive experience building production websites & interactive web applications. I can consistently turn designs into front ends that are responsive, elegant, performant, and pixel perfect. ",
-    },
-  ],
-  noscript: ["JavaScript is required for this site."],
-});
 </script>
 
 <style lang="scss" scoped>
